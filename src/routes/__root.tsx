@@ -77,20 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Wing Tschun Rifo | Erwitte, Hamm und Warstein" },
+      { title: "Wing Tschun Rifo" },
       {
         name: "description",
         content:
-          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein. Probetraining ohne Anmeldung.",
+          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
       },
       { name: "theme-color", content: "#4d4e53" },
       { property: "og:title", content: "Wing Tschun Rifo" },
       {
         property: "og:description",
-        content: "Kampfkunst mit Prinzipien – Erwitte, Hamm, Warstein.",
+        content: "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Wing Tschun Rifo" },
+      { name: "twitter:description", content: "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d311059e-e1e3-43cf-8772-c9ab1ed4f5f1/id-preview-477ba954--16fb2e1e-a06b-420d-968b-509b8d6db979.lovable.app-1784148907544.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d311059e-e1e3-43cf-8772-c9ab1ed4f5f1/id-preview-477ba954--16fb2e1e-a06b-420d-968b-509b8d6db979.lovable.app-1784148907544.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

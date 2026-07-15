@@ -16,7 +16,7 @@ import videoSifu from "@/assets/wt-rifo/video-sifu-jimmy-jemirifo.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wing Tschun Rifo | Erwitte, Hamm und Warstein" },
+      { title: "Wing Tschun Rifo" },
       {
         name: "description",
         content:
