@@ -79,6 +79,10 @@ function Erwitte() {
               <strong>Schulleitung:</strong>
               <br />
               Erhard Jochem
+              <br />
+              <a href="tel:+491702088949" className="underline hover:text-brand-gray">
+                0170 2088 949
+              </a>
             </p>
             <Button to="/einsteiger" block>
               Hinweise zum Probetraining
