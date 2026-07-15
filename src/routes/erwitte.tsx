@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { SiteLayout, Button, Missing, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
@@ -17,12 +18,16 @@ export const Route = createFileRoute("/erwitte")({
   component: Erwitte,
 });
 
-const rows: [string, string][] = [
+const rows: [string, string | ReactNode][] = [
   ["Standort", "Erwitte"],
   ["Trainer", "Erhard Jochem"],
-  ["Trainingszeiten", "Bitte direkt bei der Schule erfragen"],
-  ["Trainingsadresse", "Noch einzutragen"],
-  ["Kontakt", "Noch einzutragen"],
+  ["Trainingszeiten", "Montag und Mittwoch, 19:15–20:45 Uhr"],
+  ["Trainingsadresse", "Hellweg 2, 59597 Erwitte"],
+  ["Kontakt", (
+    <a href="tel:+491702088949" className="underline hover:text-brand-gray">
+      0170 2088 949
+    </a>
+  )],
 ];
 
 function Erwitte() {
@@ -51,10 +56,6 @@ function Erwitte() {
               </tbody>
             </table>
           </div>
-          <Missing>
-            <strong>Noch offen:</strong> Die aktuellen Trainingszeiten müssen vor der
-            Veröffentlichung ergänzt oder durch eine direkte Kontaktmöglichkeit ersetzt werden.
-          </Missing>
 
           <SectionTitle>Sei unser Gast</SectionTitle>
           <p>
@@ -78,6 +79,10 @@ function Erwitte() {
               <strong>Schulleitung:</strong>
               <br />
               Erhard Jochem
+              <br />
+              <a href="tel:+491702088949" className="underline hover:text-brand-gray">
+                0170 2088 949
+              </a>
             </p>
             <Button to="/einsteiger" block>
               Hinweise zum Probetraining

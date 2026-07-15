@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
@@ -18,12 +19,16 @@ export const Route = createFileRoute("/warstein")({
   component: Warstein,
 });
 
-const rows: [string, string][] = [
+const rows: [string, string | ReactNode][] = [
   ["Standort", "Warstein"],
   ["Trainer", "Jürgen Reuter"],
   ["Trainingszeiten", "Mittwoch und Freitag, 19:00–20:30 Uhr"],
   ["Trainingsadresse", "Auf'm Bruch 12, 59581 Warstein"],
-  ["Kontakt", "Noch einzutragen"],
+  ["Kontakt", (
+    <a href="tel:+491752071953" className="underline hover:text-brand-gray">
+      0175 207 1953
+    </a>
+  )],
 ];
 
 function Warstein() {
@@ -84,6 +89,10 @@ function Warstein() {
               <strong>Schulleitung:</strong>
               <br />
               Jürgen Reuter
+              <br />
+              <a href="tel:+491752071953" className="underline hover:text-brand-gray">
+                0175 207 1953
+              </a>
             </p>
             <Button to="/einsteiger" block>
               Einfach vorbeikommen

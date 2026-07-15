@@ -20,19 +20,19 @@ const schools = [
   {
     name: "Erwitte",
     trainer: "Erhard Jochem",
-    body: "Informationen über die Schule, das Training und die noch einzutragenden Kontaktdaten.",
+    body: "Training montags und mittwochs von 19:15 bis 20:45 Uhr in Erwitte. Schulleitung: Erhard Jochem.",
     to: "/erwitte",
   },
   {
     name: "Hamm",
     trainer: "Jürgen Potthoff",
-    body: "Informationen über die Schule, das Training und die noch einzutragenden Kontaktdaten.",
+    body: "Informationen über die Schule und das Training in Hamm. Kontaktdaten folgen.",
     to: "/hamm",
   },
   {
     name: "Warstein",
     trainer: "Jürgen Reuter",
-    body: "Training mittwochs und freitags von 19:00 bis 20:30 Uhr.",
+    body: "Training mittwochs und freitags von 19:00 bis 20:30 Uhr in Warstein. Schulleitung: Jürgen Reuter.",
     to: "/warstein",
   },
 ];

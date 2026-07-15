@@ -45,7 +45,15 @@ function Kontakt() {
               <p className="text-sm mb-1">
                 <strong>Erhard Jochem</strong>
               </p>
-              <p className="text-sm mb-3">Kontaktangaben noch einzutragen.</p>
+              <p className="text-sm mb-3">
+                Montag und Mittwoch, 19:15–20:45 Uhr
+                <br />
+                Hellweg 2, 59597 Erwitte
+                <br />
+                <a href="tel:+491702088949" className="underline hover:text-brand-gray">
+                  0170 2088 949
+                </a>
+              </p>
               <Button to="/erwitte">Zur Schule</Button>
             </article>
             <article className="border border-brand-gray-line bg-[#f0f0f0] p-4">
@@ -65,6 +73,10 @@ function Kontakt() {
                 Mittwoch und Freitag, 19:00–20:30 Uhr
                 <br />
                 Auf'm Bruch 12, 59581 Warstein
+                <br />
+                <a href="tel:+491752071953" className="underline hover:text-brand-gray">
+                  0175 207 1953
+                </a>
               </p>
               <Button to="/warstein">Zur Schule</Button>
             </article>
