@@ -10,10 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WingTschunRouteImport } from './routes/wing-tschun'
+import { Route as WarsteinRouteImport } from './routes/warstein'
 import { Route as VideosRouteImport } from './routes/videos'
+import { Route as TrainingsinhalteRouteImport } from './routes/trainingsinhalte'
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as SchulenRouteImport } from './routes/schulen'
+import { Route as PrinzipienRouteImport } from './routes/prinzipien'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as HammRouteImport } from './routes/hamm'
+import { Route as ErwitteRouteImport } from './routes/erwitte'
+import { Route as EinsteigerRouteImport } from './routes/einsteiger'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WingTschunRoute = WingTschunRouteImport.update({
@@ -21,9 +29,19 @@ const WingTschunRoute = WingTschunRouteImport.update({
   path: '/wing-tschun',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WarsteinRoute = WarsteinRouteImport.update({
+  id: '/warstein',
+  path: '/warstein',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VideosRoute = VideosRouteImport.update({
   id: '/videos',
   path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrainingsinhalteRoute = TrainingsinhalteRouteImport.update({
+  id: '/trainingsinhalte',
+  path: '/trainingsinhalte',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TrainingRoute = TrainingRouteImport.update({
@@ -36,9 +54,39 @@ const SchulenRoute = SchulenRouteImport.update({
   path: '/schulen',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrinzipienRoute = PrinzipienRouteImport.update({
+  id: '/prinzipien',
+  path: '/prinzipien',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KontaktRoute = KontaktRouteImport.update({
   id: '/kontakt',
   path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HammRoute = HammRouteImport.update({
+  id: '/hamm',
+  path: '/hamm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ErwitteRoute = ErwitteRouteImport.update({
+  id: '/erwitte',
+  path: '/erwitte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EinsteigerRoute = EinsteigerRouteImport.update({
+  id: '/einsteiger',
+  path: '/einsteiger',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -49,56 +97,118 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/einsteiger': typeof EinsteigerRoute
+  '/erwitte': typeof ErwitteRoute
+  '/hamm': typeof HammRoute
+  '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
+  '/prinzipien': typeof PrinzipienRoute
   '/schulen': typeof SchulenRoute
   '/training': typeof TrainingRoute
+  '/trainingsinhalte': typeof TrainingsinhalteRoute
   '/videos': typeof VideosRoute
+  '/warstein': typeof WarsteinRoute
   '/wing-tschun': typeof WingTschunRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/einsteiger': typeof EinsteigerRoute
+  '/erwitte': typeof ErwitteRoute
+  '/hamm': typeof HammRoute
+  '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
+  '/prinzipien': typeof PrinzipienRoute
   '/schulen': typeof SchulenRoute
   '/training': typeof TrainingRoute
+  '/trainingsinhalte': typeof TrainingsinhalteRoute
   '/videos': typeof VideosRoute
+  '/warstein': typeof WarsteinRoute
   '/wing-tschun': typeof WingTschunRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/einsteiger': typeof EinsteigerRoute
+  '/erwitte': typeof ErwitteRoute
+  '/hamm': typeof HammRoute
+  '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
+  '/prinzipien': typeof PrinzipienRoute
   '/schulen': typeof SchulenRoute
   '/training': typeof TrainingRoute
+  '/trainingsinhalte': typeof TrainingsinhalteRoute
   '/videos': typeof VideosRoute
+  '/warstein': typeof WarsteinRoute
   '/wing-tschun': typeof WingTschunRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/datenschutz'
+    | '/einsteiger'
+    | '/erwitte'
+    | '/hamm'
+    | '/impressum'
     | '/kontakt'
+    | '/prinzipien'
     | '/schulen'
     | '/training'
+    | '/trainingsinhalte'
     | '/videos'
+    | '/warstein'
     | '/wing-tschun'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kontakt' | '/schulen' | '/training' | '/videos' | '/wing-tschun'
+  to:
+    | '/'
+    | '/datenschutz'
+    | '/einsteiger'
+    | '/erwitte'
+    | '/hamm'
+    | '/impressum'
+    | '/kontakt'
+    | '/prinzipien'
+    | '/schulen'
+    | '/training'
+    | '/trainingsinhalte'
+    | '/videos'
+    | '/warstein'
+    | '/wing-tschun'
   id:
     | '__root__'
     | '/'
+    | '/datenschutz'
+    | '/einsteiger'
+    | '/erwitte'
+    | '/hamm'
+    | '/impressum'
     | '/kontakt'
+    | '/prinzipien'
     | '/schulen'
     | '/training'
+    | '/trainingsinhalte'
     | '/videos'
+    | '/warstein'
     | '/wing-tschun'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  EinsteigerRoute: typeof EinsteigerRoute
+  ErwitteRoute: typeof ErwitteRoute
+  HammRoute: typeof HammRoute
+  ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
+  PrinzipienRoute: typeof PrinzipienRoute
   SchulenRoute: typeof SchulenRoute
   TrainingRoute: typeof TrainingRoute
+  TrainingsinhalteRoute: typeof TrainingsinhalteRoute
   VideosRoute: typeof VideosRoute
+  WarsteinRoute: typeof WarsteinRoute
   WingTschunRoute: typeof WingTschunRoute
 }
 
@@ -111,11 +221,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WingTschunRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/warstein': {
+      id: '/warstein'
+      path: '/warstein'
+      fullPath: '/warstein'
+      preLoaderRoute: typeof WarsteinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/videos': {
       id: '/videos'
       path: '/videos'
       fullPath: '/videos'
       preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trainingsinhalte': {
+      id: '/trainingsinhalte'
+      path: '/trainingsinhalte'
+      fullPath: '/trainingsinhalte'
+      preLoaderRoute: typeof TrainingsinhalteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/training': {
@@ -132,11 +256,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SchulenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/prinzipien': {
+      id: '/prinzipien'
+      path: '/prinzipien'
+      fullPath: '/prinzipien'
+      preLoaderRoute: typeof PrinzipienRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/kontakt': {
       id: '/kontakt'
       path: '/kontakt'
       fullPath: '/kontakt'
       preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hamm': {
+      id: '/hamm'
+      path: '/hamm'
+      fullPath: '/hamm'
+      preLoaderRoute: typeof HammRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/erwitte': {
+      id: '/erwitte'
+      path: '/erwitte'
+      fullPath: '/erwitte'
+      preLoaderRoute: typeof ErwitteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/einsteiger': {
+      id: '/einsteiger'
+      path: '/einsteiger'
+      fullPath: '/einsteiger'
+      preLoaderRoute: typeof EinsteigerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -151,10 +317,18 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  EinsteigerRoute: EinsteigerRoute,
+  ErwitteRoute: ErwitteRoute,
+  HammRoute: HammRoute,
+  ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
+  PrinzipienRoute: PrinzipienRoute,
   SchulenRoute: SchulenRoute,
   TrainingRoute: TrainingRoute,
+  TrainingsinhalteRoute: TrainingsinhalteRoute,
   VideosRoute: VideosRoute,
+  WarsteinRoute: WarsteinRoute,
   WingTschunRoute: WingTschunRoute,
 }
 export const routeTree = rootRouteImport
