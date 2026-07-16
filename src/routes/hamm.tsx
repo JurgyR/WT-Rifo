@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, Button, Missing, SectionTitle } from "@/components/SiteLayout";
+import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
 import juergenPotthoff from "@/assets/wt-rifo/juergen-potthoff.jpg.asset.json";
@@ -51,11 +51,6 @@ function Hamm() {
               </tbody>
             </table>
           </div>
-          <Missing>
-            <strong>Noch offen:</strong> Die aktuellen Trainingszeiten müssen vor der
-            Veröffentlichung ergänzt oder durch eine direkte Kontaktmöglichkeit ersetzt werden.
-          </Missing>
-
           <SectionTitle>Sei unser Gast</SectionTitle>
           <p>
             Du bist jederzeit herzlich eingeladen, Unterricht, Gruppe und Trainingsweise bei
