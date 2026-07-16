@@ -22,7 +22,7 @@ const rows: [string, string][] = [
   ["Trainer", "Jürgen Potthoff"],
   ["Trainingszeiten", "Bitte direkt bei der Schule erfragen"],
   ["Trainingsadresse", "An der Marienkirche 10, 59073 Hamm"],
-  ["Kontakt", "Noch einzutragen"],
+  ["Kontakt", "0176 6418 1156"],
 ];
 
 function Hamm() {
