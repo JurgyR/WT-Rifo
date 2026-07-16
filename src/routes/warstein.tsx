@@ -102,6 +102,11 @@ function Warstein() {
             <Button to="/einsteiger" block>
               Einfach vorbeikommen
             </Button>
+            <div className="mt-2">
+              <Button href="https://wtrifo-warstein.com" external variant="gray" block>
+                Website Warstein
+              </Button>
+            </div>
           </section>
           <LinkList title="Weitere Schulen" items={schulenLinks} />
         </aside>
