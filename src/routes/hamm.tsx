@@ -51,11 +51,6 @@ function Hamm() {
               </tbody>
             </table>
           </div>
-          <Missing>
-            <strong>Noch offen:</strong> Die aktuellen Trainingszeiten müssen vor der
-            Veröffentlichung ergänzt oder durch eine direkte Kontaktmöglichkeit ersetzt werden.
-          </Missing>
-
           <SectionTitle>Sei unser Gast</SectionTitle>
           <p>
             Du bist jederzeit herzlich eingeladen, Unterricht, Gruppe und Trainingsweise bei
