@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Button, Missing, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
-import gemeinschaft from "@/assets/wt-rifo/gemeinschaft.webp";
+import juergenPotthoff from "@/assets/wt-rifo/juergen-potthoff.jpg.asset.json";
 
 export const Route = createFileRoute("/hamm")({
   head: () => ({
@@ -73,7 +73,7 @@ function Hamm() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Hamm</h2>
-            <img src={gemeinschaft} alt="Gemeinsames Wing-Tschun-Training" className="w-full mb-3" />
+            <img src={juergenPotthoff.url} alt="Jürgen Potthoff, Schulleitung Hamm" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />

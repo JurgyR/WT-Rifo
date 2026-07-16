@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { SiteLayout, Button, Missing, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
-import gemeinschaft from "@/assets/wt-rifo/gemeinschaft.webp";
+import erwitteTraining from "@/assets/wt-rifo/erwitte-training.jpg.asset.json";
 
 export const Route = createFileRoute("/erwitte")({
   head: () => ({
@@ -74,7 +74,7 @@ function Erwitte() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Erwitte</h2>
-            <img src={gemeinschaft} alt="Gemeinsames Wing-Tschun-Training" className="w-full mb-3" />
+            <img src={erwitteTraining.url} alt="Wing-Tschun-Training in Erwitte" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />

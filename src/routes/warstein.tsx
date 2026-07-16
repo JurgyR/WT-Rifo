@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
-import gemeinschaft from "@/assets/wt-rifo/gemeinschaft.webp";
+import warsteinTraining from "@/assets/wt-rifo/warstein-training.jpg.asset.json";
 
 export const Route = createFileRoute("/warstein")({
   head: () => ({
@@ -27,6 +27,11 @@ const rows: [string, string | ReactNode][] = [
   ["Kontakt", (
     <a href="tel:+491752071953" className="underline hover:text-brand-gray">
       0175 207 1953
+    </a>
+  )],
+  ["Website", (
+    <a href="https://wtrifo-warstein.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-gray">
+      wtrifo-warstein.com
     </a>
   )],
 ];
@@ -84,7 +89,7 @@ function Warstein() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Warstein</h2>
-            <img src={gemeinschaft} alt="Gemeinsames Wing-Tschun-Training" className="w-full mb-3" />
+            <img src={warsteinTraining.url} alt="Chi-Sao-Training in Warstein" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />
@@ -97,6 +102,11 @@ function Warstein() {
             <Button to="/einsteiger" block>
               Einfach vorbeikommen
             </Button>
+            <div className="mt-2">
+              <Button href="https://wtrifo-warstein.com" external variant="gray" block>
+                Website Warstein
+              </Button>
+            </div>
           </section>
           <LinkList title="Weitere Schulen" items={schulenLinks} />
         </aside>
