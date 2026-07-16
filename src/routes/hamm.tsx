@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
@@ -17,12 +18,21 @@ export const Route = createFileRoute("/hamm")({
   component: Hamm,
 });
 
-const rows: [string, string][] = [
+const rows: [string, string | ReactNode][] = [
   ["Standort", "Hamm"],
   ["Trainer", "Jürgen Potthoff"],
   ["Trainingszeiten", "Bitte direkt bei der Schule erfragen"],
   ["Trainingsadresse", "An der Marienkirche 10, 59073 Hamm"],
-  ["Kontakt", "0176 6418 1156"],
+  ["Kontakt", (
+    <a href="tel:+4917664181156" className="underline hover:text-brand-gray">
+      0176 6418 1156
+    </a>
+  )],
+  ["Website", (
+    <a href="https://www.wtrifo-hamm.de/" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-gray">
+      wtrifo-hamm.de
+    </a>
+  )],
 ];
 
 function Hamm() {
