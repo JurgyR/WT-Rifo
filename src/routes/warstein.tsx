@@ -29,6 +29,11 @@ const rows: [string, string | ReactNode][] = [
       0175 207 1953
     </a>
   )],
+  ["Website", (
+    <a href="https://wtrifo-warstein.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-gray">
+      wtrifo-warstein.com
+    </a>
+  )],
 ];
 
 function Warstein() {
