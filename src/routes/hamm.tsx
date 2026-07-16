@@ -21,7 +21,7 @@ export const Route = createFileRoute("/hamm")({
 const rows: [string, string | ReactNode][] = [
   ["Standort", "Hamm"],
   ["Trainer", "Jürgen Potthoff"],
-  ["Trainingszeiten", "Bitte direkt bei der Schule erfragen"],
+  ["Trainingszeiten", "Montag und Donnerstag, 19:30 - 21:00 Uhr"],
   ["Trainingsadresse", "An der Marienkirche 10, 59073 Hamm"],
   ["Kontakt", (
     <a href="tel:+4917664181156" className="underline hover:text-brand-gray">
