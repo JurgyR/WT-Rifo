@@ -84,7 +84,7 @@ function Warstein() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Warstein</h2>
-            <img src={gemeinschaft} alt="Gemeinsames Wing-Tschun-Training" className="w-full mb-3" />
+            <img src={warsteinTraining.url} alt="Chi-Sao-Training in Warstein" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />
