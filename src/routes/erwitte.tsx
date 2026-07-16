@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { SiteLayout, Button, Missing, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
-import gemeinschaft from "@/assets/wt-rifo/gemeinschaft.webp";
+import erwitteTraining from "@/assets/wt-rifo/erwitte-training.jpg.asset.json";
 
 export const Route = createFileRoute("/erwitte")({
   head: () => ({

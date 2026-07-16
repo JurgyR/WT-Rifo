@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
-import gemeinschaft from "@/assets/wt-rifo/gemeinschaft.webp";
+import warsteinTraining from "@/assets/wt-rifo/warstein-training.jpg.asset.json";
 
 export const Route = createFileRoute("/warstein")({
   head: () => ({
