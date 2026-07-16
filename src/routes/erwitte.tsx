@@ -28,6 +28,11 @@ const rows: [string, string | ReactNode][] = [
       0170 2088 949
     </a>
   )],
+  ["Website", (
+    <a href="https://onlinestreet.de/poi/dkdpRkJqY1RUTTNrbysvN29SMFVYQT09" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-gray">
+      onlinestreet.de
+    </a>
+  )],
 ];
 
 function Erwitte() {
