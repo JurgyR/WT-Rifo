@@ -131,8 +131,8 @@ function Index() {
           </SectionTitle>
 
           <NewsItem
-            img={partnertraining}
-            alt="Wing-Tschun-Partnertraining"
+            img={technik}
+            alt="Kontrollierte Technikübung"
             to="/erwitte"
             title="Erwitte"
           >
@@ -140,8 +140,8 @@ function Index() {
             Trainingsort und Zeiten erhältst du direkt bei der Schule.
           </NewsItem>
           <NewsItem
-            img={technik}
-            alt="Kontrollierte Technikübung"
+            img={partnertraining}
+            alt="Wing-Tschun-Partnertraining"
             to="/hamm"
             title="Hamm"
           >
