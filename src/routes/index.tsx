@@ -8,7 +8,7 @@ import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
 import taoTeKing from "@/assets/wt-rifo/tao-te-king.jpg";
 import partnertraining from "@/assets/wt-rifo/partnertraining.webp";
 import technik from "@/assets/wt-rifo/technik.webp";
-import gemeinschaft from "@/assets/wt-rifo/gemeinschaft.webp";
+import warsteinHome from "@/assets/wt-rifo/warstein-home.jpg.asset.json";
 import selbstverteidigung from "@/assets/wt-rifo/selbstverteidigung.webp";
 import probetraining from "@/assets/wt-rifo/probetraining.jpg";
 import videoSifu from "@/assets/wt-rifo/video-sifu-jimmy-jemirifo.jpg";
@@ -149,8 +149,8 @@ function Index() {
             Probetraining kannst du ohne vorherige Anmeldung vorbeikommen.
           </NewsItem>
           <NewsItem
-            img={gemeinschaft}
-            alt="Gemeinsames Wing-Tschun-Training"
+            img={warsteinHome.url}
+            alt="Wing-Tschun-Training in Warstein"
             to="/warstein"
             title="Warstein"
           >
