@@ -4,7 +4,7 @@ import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, einsteigerLinks, schulenLinks } from "@/components/Sidebar";
 import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
 import bannerMeister from "@/assets/wt-rifo/banner-meister.jpg";
-import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
+import bannerSifuJimmy from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import taoTeKing from "@/assets/wt-rifo/tao-te-king.jpg";
 import hammTraining from "@/assets/wt-rifo/hamm-training.jpg.asset.json";
 import technik from "@/assets/wt-rifo/technik.webp";
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 const slides = [
   { src: bannerHartWeich, alt: "Hart Weich Toleranz – gemeinsam trainieren und bewusst handeln" },
   { src: bannerMeister, alt: "Ein wahrer Meister ist immer ein Lehrling" },
-  { src: bannerGeduld, alt: "Geduld – auf den richtigen Augenblick warten können" },
+  { src: bannerSifuJimmy.url, alt: "Sifu Jimmy Jemirifo – Tausend Meter beginnen mit dem ersten Schritt" },
 ];
 
 function HeroSlider() {
