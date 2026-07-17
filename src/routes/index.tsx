@@ -140,8 +140,8 @@ function Index() {
             Trainingsort und Zeiten erhältst du direkt bei der Schule.
           </NewsItem>
           <NewsItem
-            img={partnertraining}
-            alt="Wing-Tschun-Partnertraining"
+            img={hammTraining.url}
+            alt="Wing-Tschun-Partnertraining in Hamm"
             to="/hamm"
             title="Hamm"
           >
