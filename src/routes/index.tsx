@@ -6,7 +6,7 @@ import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
 import bannerMeister from "@/assets/wt-rifo/banner-meister.jpg";
 import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
 import taoTeKing from "@/assets/wt-rifo/tao-te-king.jpg";
-import partnertraining from "@/assets/wt-rifo/partnertraining.webp";
+import hammTraining from "@/assets/wt-rifo/hamm-training.jpg.asset.json";
 import technik from "@/assets/wt-rifo/technik.webp";
 import warsteinHome from "@/assets/wt-rifo/warstein-home.jpg.asset.json";
 import selbstverteidigung from "@/assets/wt-rifo/selbstverteidigung.webp";
@@ -140,8 +140,8 @@ function Index() {
             Trainingsort und Zeiten erhältst du direkt bei der Schule.
           </NewsItem>
           <NewsItem
-            img={partnertraining}
-            alt="Wing-Tschun-Partnertraining"
+            img={hammTraining.url}
+            alt="Wing-Tschun-Partnertraining in Hamm"
             to="/hamm"
             title="Hamm"
           >
