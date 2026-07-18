@@ -44,7 +44,7 @@ export function SiteLayout({
                   <Link
                     to={n.to}
                     activeProps={{ className: "bg-brand-yellow text-brand-ink" }}
-                    className="block px-3 py-2 rounded text-brand-ink hover:bg-brand-gray hover:text-white transition"
+                    className={`block px-3 py-2 rounded text-brand-ink hover:bg-brand-gray hover:text-white transition ${("highlight" in n && n.highlight) ? "border-b-2 border-brand-yellow" : ""}`}
                   >
                     {n.label}
                   </Link>
@@ -104,7 +104,7 @@ export function SiteLayout({
 
       {banner && (
         <div className="relative w-full overflow-hidden bg-brand-gray-light" style={{ aspectRatio: "960 / 304" }}>
-          <img src={banner.src} alt={banner.alt ?? ""} className="absolute inset-0 h-full w-full object-cover" />
+          <img src={banner.src} alt={banner.alt ?? ""} className="absolute inset-0 h-full w-full object-contain object-center" />
           <span className="absolute left-4 bottom-4 sm:left-10 sm:bottom-6 bg-brand-gray/90 text-white px-3 py-2 sm:px-4 sm:py-2.5 border-l-4 sm:border-l-[7px] border-brand-yellow text-lg sm:text-2xl leading-tight max-w-[85%]">
             {banner.label}
           </span>
