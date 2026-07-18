@@ -40,7 +40,7 @@ function Warstein() {
   return (
     <SiteLayout
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Schule Warstein" }]}
-      banner={{ src: bannerGeduld, label: "Schule Warstein" }}
+      banner={{ src: sifuBanner.url, label: "Schule Warstein" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
