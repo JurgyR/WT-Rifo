@@ -48,7 +48,15 @@ function Kontakt() {
               <p className="text-sm mb-3">
                 Montag und Mittwoch, 19:15–20:45 Uhr
                 <br />
-                Hellweg 2, 59597 Erwitte
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Hellweg+2%2C+59597+Erwitte"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Route zu WT-Rifo Erwitte in Google Maps öffnen – externer Link"
+                  className="underline hover:text-brand-gray"
+                >
+                  Hellweg 2, 59597 Erwitte ↗
+                </a>
                 <br />
                 <a href="tel:+491702088949" className="underline hover:text-brand-gray">
                   0170 2088 949
@@ -64,7 +72,15 @@ function Kontakt() {
               <p className="text-sm mb-3">
                 Montag und Donnerstag, 19:30–21:00 Uhr
                 <br />
-                An der Marienkirche 10, 59073 Hamm
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=An+der+Marienkirche+10%2C+59073+Hamm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Route zu WT-Rifo Hamm in Google Maps öffnen – externer Link"
+                  className="underline hover:text-brand-gray"
+                >
+                  An der Marienkirche 10, 59073 Hamm ↗
+                </a>
                 <br />
                 <a href="tel:+4917664181156" className="underline hover:text-brand-gray">
                   0176 6418 1156
@@ -80,7 +96,15 @@ function Kontakt() {
               <p className="text-sm mb-3">
                 Mittwoch und Freitag, 19:00–20:30 Uhr
                 <br />
-                Auf'm Bruch 12, 59581 Warstein
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Auf%27m+Bruch+12%2C+59581+Warstein"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Route zu WT-Rifo Warstein in Google Maps öffnen – externer Link"
+                  className="underline hover:text-brand-gray"
+                >
+                  Auf'm Bruch 12, 59581 Warstein ↗
+                </a>
                 <br />
                 <a href="tel:+491752071953" className="underline hover:text-brand-gray">
                   0175 207 1953
