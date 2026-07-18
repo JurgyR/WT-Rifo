@@ -96,7 +96,7 @@ function Training() {
           <p>
             Einsteiger und erfahrene Schüler können Teile des Trainings gemeinsam absolvieren.
             Die konkrete Aufgabe und die Intensität werden dem jeweiligen Stand angepasst.
-            Fortgeschrittene sollen nicht einfach „gewinnen", sondern dem Einsteiger ein
+            Fortgeschrittene sollen nicht einfach „gewinnen“, sondern dem Einsteiger ein
             kontrolliertes und hilfreiches Lernen ermöglichen.
           </p>
 

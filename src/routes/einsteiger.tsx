@@ -37,7 +37,7 @@ const faqs = [
     a: "Das Alter allein entscheidet nicht. Wichtiger sind der gesundheitliche Zustand, eine angemessene Belastung und ein verantwortungsvoller Trainingsaufbau. Bei bestehenden Beschwerden sollte vorher ärztlicher Rat eingeholt und der Trainer informiert werden.",
   },
   {
-    q: "Werde ich beim Probetraining geschlagen oder „verhauen"?",
+    q: "Werde ich beim Probetraining geschlagen oder „verhauen“?",
     a: "Nein. Partnerübungen werden erklärt und kontrolliert aufgebaut. Kontakt kann zum realistischen Lernen dazugehören, die Intensität muss aber zum Können und zur Aufgabe passen. Der Trainingspartner ist nicht der Feind.",
   },
   {
