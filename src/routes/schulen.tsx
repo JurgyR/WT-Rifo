@@ -45,8 +45,7 @@ function Schulen() {
     >
       <h1 className="text-2xl sm:text-3xl font-normal mb-3">Schulen und Trainer</h1>
       <p className="mb-6">
-        Die Wing Tschun Rifo Organisation ist aktuell an drei Standorten vertreten. Andere
-        frühere Schulen und Schulleiter sind in dieser Neufassung nicht enthalten.
+        Die Wing Tschun Rifo Organisation ist aktuell an drei Standorten vertreten.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -68,9 +67,9 @@ function Schulen() {
 
       <h2 className="text-xl font-normal mb-2">Dein Einstieg</h2>
       <Note>
-        <strong>Einfach mitmachen und ausprobieren:</strong> Du bist an jedem Standort
-        jederzeit zu einem unverbindlichen Probetraining während der regulären Trainingszeiten
-        eingeladen. Eine vorherige Anmeldung ist nicht notwendig.
+        <strong>Einfach mitmachen und ausprobieren:</strong> Du bist zu Beginn jeder
+        regulären Trainingseinheit zu einem unverbindlichen Probetraining eingeladen. Eine
+        vorherige Anmeldung ist nicht notwendig.
       </Note>
       <p>
         Wähle die Schule, die für dich am besten erreichbar ist, informiere dich über
