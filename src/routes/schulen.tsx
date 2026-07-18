@@ -26,7 +26,7 @@ const schools = [
   {
     name: "Hamm",
     trainer: "Jürgen Potthoff",
-    body: "Informationen über die Schule und das Training in Hamm. Kontaktdaten folgen.",
+    body: "Training montags und donnerstags von 19:30 bis 21:00 Uhr in Hamm. Schulleitung: Jürgen Potthoff.",
     to: "/hamm",
   },
   {
