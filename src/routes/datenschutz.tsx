@@ -64,6 +64,24 @@ function Datenschutz() {
           hergestellt. Erst wenn du einen Videolink anklickst, verlässt du diese Website;
           anschließend gelten die Datenschutzbestimmungen des jeweiligen Plattformbetreibers.
         </p>
+        <h2 className="text-xl font-normal mt-6 mb-2">Externe Links zu Google Maps</h2>
+        <p>
+          Diese Website enthält ausschließlich externe Links zu Google Maps. Beim bloßen
+          Aufruf unserer Website wird keine Google-Maps-Karte geladen und keine Verbindung zu
+          Google Maps hergestellt. Erst beim Anklicken eines entsprechenden Links verlassen Sie
+          unsere Website. Anschließend können durch Google personenbezogene Daten,
+          insbesondere die IP-Adresse und gegebenenfalls Standortdaten, verarbeitet werden. Es
+          gelten die{" "}
+          <a
+            href="https://policies.google.com/privacy?hl=de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-brand-gray"
+          >
+            Datenschutzbestimmungen von Google
+          </a>
+          .
+        </p>
         <Missing>
           <strong>Vor Veröffentlichung:</strong> Verantwortlichen, Datenschutzkontakt,
           Hosting-Anbieter, konkrete Protokollierung und alle später ergänzten Dienste
