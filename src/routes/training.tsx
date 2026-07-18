@@ -52,7 +52,7 @@ function Training() {
   return (
     <SiteLayout
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Training" }]}
-      banner={{ src: bannerGeduld, label: "Training" }}
+      banner={{ src: sifuBanner.url, label: "Training" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
