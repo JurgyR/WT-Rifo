@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
+import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import juergenPotthoff from "@/assets/wt-rifo/juergen-potthoff.jpg.asset.json";
@@ -67,6 +67,13 @@ function Hamm() {
             einem unverbindlichen Probetraining kennenzulernen. Komm einfach zu einer
             regulären Trainingseinheit vorbei – eine vorherige Anmeldung ist nicht notwendig.
           </p>
+          <Note>
+            <strong>Probetraining in Hamm:</strong>
+            <br />
+            Montag und Donnerstag, 19:30–21:00 Uhr
+            <br />
+            An der Marienkirche 10, 59073 Hamm
+          </Note>
 
           <SectionTitle>Für Einsteiger geeignet</SectionTitle>
           <p>

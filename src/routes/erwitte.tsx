@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { SiteLayout, Button, Missing, SectionTitle } from "@/components/SiteLayout";
+import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
 import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import erwitteTraining from "@/assets/wt-rifo/erwitte-training.jpg.asset.json";
@@ -68,6 +68,13 @@ function Erwitte() {
             einem unverbindlichen Probetraining kennenzulernen. Komm einfach zu einer
             regulären Trainingseinheit vorbei – eine vorherige Anmeldung ist nicht notwendig.
           </p>
+          <Note>
+            <strong>Probetraining in Erwitte:</strong>
+            <br />
+            Montag und Mittwoch, 19:15–20:45 Uhr
+            <br />
+            Hellweg 2, 59597 Erwitte
+          </Note>
 
           <SectionTitle>Für Einsteiger geeignet</SectionTitle>
           <p>
