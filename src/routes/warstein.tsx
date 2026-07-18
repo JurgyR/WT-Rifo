@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
-import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
+import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import warsteinTraining from "@/assets/wt-rifo/warstein-training.jpg.asset.json";
 
 export const Route = createFileRoute("/warstein")({
