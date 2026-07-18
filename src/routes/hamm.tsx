@@ -77,8 +77,10 @@ function Hamm() {
 
           <SectionTitle>Für Einsteiger geeignet</SectionTitle>
           <p>
-            Vorkenntnisse sind nicht erforderlich. Die Grundlagen werden schrittweise erklärt
-            und im eigenen Lerntempo vertieft.
+            Vorkenntnisse sind nicht erforderlich. Die Grundlagen werden schrittweise
+            erklärt und im eigenen Lerntempo vertieft. Aufgaben und Intensität werden an
+            den Lernstand angepasst, sodass Einsteiger und erfahrene Übende zusammen
+            trainieren können.
           </p>
         </article>
 
