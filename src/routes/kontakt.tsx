@@ -91,9 +91,10 @@ function Kontakt() {
           </div>
 
           <Note>
-            <strong>Warum kein Kontaktformular?</strong> Ohne festgelegte Empfängeradresse und
-            serverseitige Verarbeitung wäre ein Formular nicht funktionsfähig. Die statische
-            Seite enthält deshalb bewusst kein Scheinformular.
+            <strong>Einfach vorbeikommen:</strong> Der schnellste Weg zum ersten Training ist,
+            zu einer regulären Trainingseinheit an deinem Wunschstandort zu erscheinen. Eine
+            vorherige Anmeldung ist nicht nötig – Trainer und Gruppe nehmen dich vor Ort in
+            Empfang.
           </Note>
 
           <h2 className="text-xl font-normal mt-6 mb-2">Kontakt nur bei Fragen</h2>

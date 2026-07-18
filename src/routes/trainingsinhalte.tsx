@@ -18,7 +18,7 @@ export const Route = createFileRoute("/trainingsinhalte")({
 });
 
 const rows: [string, string][] = [
-  ["Siu Nim Tao", "Die \u201Ekleine Idee\u201C vermittelt grundlegende Armbewegungen, Ausrichtung und einen stabilen Stand. Für Einsteiger ist sie das Fundament."],
+  ["Siu Nim Tao", "Die „kleine Idee“ vermittelt grundlegende Armbewegungen, Ausrichtung und einen stabilen Stand. Für Einsteiger ist sie das Fundament."],
   ["Chum Kiu", "Später werden Arme, Körperdrehung, Schritte und erste Beintechniken stärker miteinander verbunden."],
   ["Weitere Formen", "Fortgeschrittene Inhalte wie Biu Tze, Holzpuppe und Waffenformen folgen erst mit entsprechendem Trainingsstand. Die genaue Einordnung erklärt der jeweilige Trainer."],
 ];
@@ -69,7 +69,7 @@ function Inhalte() {
 
           <SectionTitle>Chi Sao: Wahrnehmen über Kontakt</SectionTitle>
           <p>
-            Chi Sao wird häufig mit \u201Eklebende Arme\u201C übersetzt. Zwei Partner halten Kontakt
+            Chi Sao wird häufig mit „klebende Arme“ übersetzt. Zwei Partner halten Kontakt
             über die Arme und üben zunächst vorgegebene Bewegungen. Dabei geht es nicht darum,
             die Arme krampfhaft festzukleben, sondern Druck, Richtung und Veränderungen früh
             zu spüren.

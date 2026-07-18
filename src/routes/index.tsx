@@ -52,10 +52,10 @@ function HeroSlider() {
           key={idx}
           src={s.src}
           alt={s.alt}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
-      <div className="absolute right-3 bottom-3 flex gap-2 z-10">
+      <div className="absolute right-3 top-3 flex gap-2 z-10">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -106,6 +106,22 @@ function Index() {
     <SiteLayout>
       <HeroSlider />
 
+      <section
+        aria-labelledby="cta-title"
+        className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-l-4 border-brand-yellow bg-[#f2f1ed] p-4"
+      >
+        <div>
+          <h2 id="cta-title" className="text-lg font-bold m-0">
+            Probetraining ohne Anmeldung
+          </h2>
+          <p className="text-sm m-0 mt-1">
+            Wähle Erwitte, Hamm oder Warstein und lerne das Training unverbindlich kennen.
+          </p>
+        </div>
+        <Button to="/schulen">Standort auswählen</Button>
+      </section>
+
+
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <section aria-labelledby="welcome-title">
           <img
@@ -138,8 +154,8 @@ function Index() {
             to="/erwitte"
             title="Erwitte"
           >
-            Training unter der Leitung von <strong>Erhard Jochem</strong>. Informationen zu
-            Trainingsort und Zeiten erhältst du direkt bei der Schule.
+            Training mit <strong>Erhard Jochem</strong>, montags und mittwochs von
+            19:15–20:45 Uhr.
           </NewsItem>
           <NewsItem
             img={hammTraining.url}
@@ -147,8 +163,8 @@ function Index() {
             to="/hamm"
             title="Hamm"
           >
-            Training unter der Leitung von <strong>Jürgen Potthoff</strong>. Zum
-            Probetraining kannst du ohne vorherige Anmeldung vorbeikommen.
+            Training mit <strong>Jürgen Potthoff</strong>, montags und donnerstags von
+            19:30–21:00 Uhr.
           </NewsItem>
           <NewsItem
             img={warsteinHome.url}
@@ -156,8 +172,8 @@ function Index() {
             to="/warstein"
             title="Warstein"
           >
-            Training unter der Leitung von <strong>Jürgen Reuter</strong>, mittwochs und
-            freitags von 19:00 bis 20:30 Uhr.
+            Training mit <strong>Jürgen Reuter</strong>, mittwochs und freitags von
+            19:00–20:30 Uhr.
           </NewsItem>
         </section>
 

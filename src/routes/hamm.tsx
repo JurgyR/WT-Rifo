@@ -63,9 +63,9 @@ function Hamm() {
           </div>
           <SectionTitle>Sei unser Gast</SectionTitle>
           <p>
-            Du bist jederzeit herzlich eingeladen, Unterricht, Gruppe und Trainingsweise bei
-            einem unverbindlichen Probetraining kennenzulernen. Komm einfach zu einer
-            regulären Trainingseinheit vorbei – eine vorherige Anmeldung ist nicht notwendig.
+            Du bist zu Beginn jeder regulären Trainingseinheit zu einem unverbindlichen
+            Probetraining eingeladen. Komm einfach vorbei – eine vorherige Anmeldung ist
+            nicht notwendig.
           </p>
           <Note>
             <strong>Probetraining in Hamm:</strong>
@@ -77,8 +77,10 @@ function Hamm() {
 
           <SectionTitle>Für Einsteiger geeignet</SectionTitle>
           <p>
-            Vorkenntnisse sind nicht erforderlich. Die Grundlagen werden schrittweise erklärt
-            und im eigenen Lerntempo vertieft.
+            Vorkenntnisse sind nicht erforderlich. Die Grundlagen werden schrittweise
+            erklärt und im eigenen Lerntempo vertieft. Aufgaben und Intensität werden an
+            den Lernstand angepasst, sodass Einsteiger und erfahrene Übende zusammen
+            trainieren können.
           </p>
         </article>
 

@@ -28,7 +28,7 @@ const rows: [string, string | ReactNode][] = [
       0170 2088 949
     </a>
   )],
-  ["Website", (
+  ["Adresse auf Onlinestreet anzeigen", (
     <a href="https://onlinestreet.de/poi/dkdpRkJqY1RUTTNrbysvN29SMFVYQT09" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-gray">
       onlinestreet.de
     </a>
@@ -64,9 +64,9 @@ function Erwitte() {
 
           <SectionTitle>Sei unser Gast</SectionTitle>
           <p>
-            Du bist jederzeit herzlich eingeladen, Unterricht, Gruppe und Trainingsweise bei
-            einem unverbindlichen Probetraining kennenzulernen. Komm einfach zu einer
-            regulären Trainingseinheit vorbei – eine vorherige Anmeldung ist nicht notwendig.
+            Du bist zu Beginn jeder regulären Trainingseinheit zu einem unverbindlichen
+            Probetraining eingeladen. Komm einfach vorbei – eine vorherige Anmeldung ist
+            nicht notwendig.
           </p>
           <Note>
             <strong>Probetraining in Erwitte:</strong>
@@ -78,8 +78,10 @@ function Erwitte() {
 
           <SectionTitle>Für Einsteiger geeignet</SectionTitle>
           <p>
-            Vorkenntnisse sind nicht erforderlich. Die Grundlagen werden schrittweise erklärt
-            und im eigenen Lerntempo vertieft.
+            Vorkenntnisse sind nicht erforderlich. Die Grundlagen werden schrittweise
+            erklärt und im eigenen Lerntempo vertieft. Aufgaben und Intensität werden an
+            den Lernstand angepasst, sodass Einsteiger und erfahrene Übende zusammen
+            trainieren können.
           </p>
         </article>
 
