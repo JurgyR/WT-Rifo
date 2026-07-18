@@ -39,7 +39,7 @@ function Prinzipien() {
           <p>
             Unnötige Umwege kosten Zeit und erschweren die Kontrolle. Im Training wird
             deshalb untersucht, welcher Weg in einer konkreten Situation einfach, stabil und
-            direkt ist. \u201EDirekt\u201C bedeutet dabei nicht hektisch oder rücksichtslos, sondern
+            direkt ist. „Direkt" bedeutet dabei nicht hektisch oder rücksichtslos, sondern
             klar und ohne überflüssige Bewegung.
           </p>
 
