@@ -14,6 +14,7 @@ import { Route as WarsteinRouteImport } from './routes/warstein'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as TrainingsinhalteRouteImport } from './routes/trainingsinhalte'
 import { Route as TrainingRouteImport } from './routes/training'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SchulenRouteImport } from './routes/schulen'
 import { Route as PrinzipienRouteImport } from './routes/prinzipien'
 import { Route as KontaktRouteImport } from './routes/kontakt'
@@ -47,6 +48,11 @@ const TrainingsinhalteRoute = TrainingsinhalteRouteImport.update({
 const TrainingRoute = TrainingRouteImport.update({
   id: '/training',
   path: '/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SchulenRoute = SchulenRouteImport.update({
@@ -105,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/prinzipien': typeof PrinzipienRoute
   '/schulen': typeof SchulenRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/training': typeof TrainingRoute
   '/trainingsinhalte': typeof TrainingsinhalteRoute
   '/videos': typeof VideosRoute
@@ -121,6 +128,7 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/prinzipien': typeof PrinzipienRoute
   '/schulen': typeof SchulenRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/training': typeof TrainingRoute
   '/trainingsinhalte': typeof TrainingsinhalteRoute
   '/videos': typeof VideosRoute
@@ -138,6 +146,7 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/prinzipien': typeof PrinzipienRoute
   '/schulen': typeof SchulenRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/training': typeof TrainingRoute
   '/trainingsinhalte': typeof TrainingsinhalteRoute
   '/videos': typeof VideosRoute
@@ -156,6 +165,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/prinzipien'
     | '/schulen'
+    | '/sitemap.xml'
     | '/training'
     | '/trainingsinhalte'
     | '/videos'
@@ -172,6 +182,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/prinzipien'
     | '/schulen'
+    | '/sitemap.xml'
     | '/training'
     | '/trainingsinhalte'
     | '/videos'
@@ -188,6 +199,7 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/prinzipien'
     | '/schulen'
+    | '/sitemap.xml'
     | '/training'
     | '/trainingsinhalte'
     | '/videos'
@@ -205,6 +217,7 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   PrinzipienRoute: typeof PrinzipienRoute
   SchulenRoute: typeof SchulenRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TrainingRoute: typeof TrainingRoute
   TrainingsinhalteRoute: typeof TrainingsinhalteRoute
   VideosRoute: typeof VideosRoute
@@ -247,6 +260,13 @@ declare module '@tanstack/react-router' {
       path: '/training'
       fullPath: '/training'
       preLoaderRoute: typeof TrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/schulen': {
@@ -325,6 +345,7 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   PrinzipienRoute: PrinzipienRoute,
   SchulenRoute: SchulenRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TrainingRoute: TrainingRoute,
   TrainingsinhalteRoute: TrainingsinhalteRoute,
   VideosRoute: VideosRoute,
@@ -334,13 +355,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
