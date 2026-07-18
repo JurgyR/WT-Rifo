@@ -24,15 +24,19 @@ function Datenschutz() {
       <article className="max-w-3xl">
         <h1 className="text-2xl sm:text-3xl font-normal mb-3">Datenschutz</h1>
         <p className="text-base mb-4">
-          Diese statische Fassung bindet keine Tracker, Analysewerkzeuge, externen
-          Schriftarten, Karten oder Social-Media-Plugins ein.
+          Diese Website bindet keine Analyse- oder Tracking-Werkzeuge und keine
+          Social-Media-Plugins ein. Für den Betrieb und die Auslieferung werden jedoch
+          Dienste eines Hosting-Anbieters genutzt, bei denen einzelne Cookies technisch
+          notwendig sein können.
         </p>
-        <h2 className="text-xl font-normal mt-6 mb-2">Server-Protokolldaten</h2>
+        <h2 className="text-xl font-normal mt-6 mb-2">Hosting und Auslieferung</h2>
         <p>
-          Beim Aufruf einer Website kann der Hosting-Anbieter technisch notwendige
-          Protokolldaten verarbeiten. Welche Daten gespeichert werden, wie lange dies
-          geschieht und auf welcher Grundlage die Verarbeitung erfolgt, hängt vom später
-          gewählten Hosting ab und muss hier vor Veröffentlichung konkret beschrieben werden.
+          Die Website wird auf der Lovable-Plattform gehostet und über die Cloudflare-
+          Infrastruktur ausgeliefert. Beim Aufruf werden technisch notwendige
+          Verbindungsdaten (unter anderem IP-Adresse, Datum und Uhrzeit, angeforderte URL,
+          User-Agent) verarbeitet, um die Seite bereitzustellen und vor Missbrauch zu
+          schützen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse
+          am sicheren Betrieb).
         </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Kontaktaufnahme</h2>
         <p>
@@ -40,10 +44,18 @@ function Datenschutz() {
           oder Formulare ergänzt, müssen Zweck, Rechtsgrundlage, Speicherdauer und Empfänger
           der Daten erläutert werden.
         </p>
-        <h2 className="text-xl font-normal mt-6 mb-2">Cookies und externe Dienste</h2>
+        <h2 className="text-xl font-normal mt-6 mb-2">Cookies</h2>
         <p>
-          In dieser Version werden keine Cookies gesetzt und keine externen Inhalte
-          automatisch geladen.
+          Cloudflare kann als Teil des Bot- und Missbrauchsschutzes ein technisch
+          notwendiges Cookie (<code>__cf_bm</code>) setzen. Dieses dient ausschließlich der
+          Unterscheidung menschlicher Besucher von automatisierten Zugriffen und wird nach
+          kurzer Zeit (in der Regel 30 Minuten) automatisch gelöscht. Weitere Cookies werden
+          von dieser Website nicht gesetzt.
+        </p>
+        <h2 className="text-xl font-normal mt-6 mb-2">Schriftarten</h2>
+        <p>
+          Schriftarten werden über den Hosting-Anbieter ausgeliefert. Es findet dabei keine
+          Einbindung von externen Google-Fonts-Servern im Nutzerbrowser statt.
         </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Videolinks zu YouTube und Vimeo</h2>
         <p>
