@@ -1,16 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, SectionTitle, Note } from "@/components/SiteLayout";
+import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
 import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 
 export const Route = createFileRoute("/prinzipien")({
   head: () => ({
     meta: [
-      { title: "Prinzipien | Wing Tschun Rifo" },
+      { title: "Prinzipien im Wing Tschun Rifo" },
       {
         name: "description",
         content:
-          "Die wichtigsten Wing-Tschun-Prinzipien für Einsteiger: direkt handeln, Kontakt nutzen, mit Kraft umgehen und handlungsfähig bleiben.",
+          "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: direkt handeln, Kontakt nutzen, nachgeben und im richtigen Moment reagieren.",
+      },
+      {
+        property: "og:title",
+        content: "Prinzipien im Wing Tschun Rifo",
+      },
+      {
+        property: "og:description",
+        content:
+          "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: direkt handeln, Kontakt nutzen, nachgeben und im richtigen Moment reagieren.",
       },
     ],
   }),
@@ -31,114 +40,82 @@ function Prinzipien() {
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-3">Prinzipien im Wing Tschun</h1>
           <p className="text-base mb-4">
-            Wing Tschun stützt sich nicht auf eine große Sammlung fester Techniken, sondern
-            auf wenige Grundregeln. Diese Prinzipien beschreiben, <em>wie</em> gehandelt
-            wird – im Umgang mit dem Partner (Kampfprinzipien) und im Umgang mit der
-            eingesetzten Energie (Kraftprinzipien).
+            Wing Tschun Rifo arbeitet nicht mit einer starren Antwort für jede denkbare Situation. Statt Hunderte Techniken auswendig zu lernen, orientieren sich die Schüler an verständlichen Prinzipien. Sie helfen dabei, Druck, Bewegungsrichtung und freie Wege wahrzunehmen und angemessen zu handeln.
           </p>
 
-          <SectionTitle>Die vier Kampfprinzipien</SectionTitle>
-          <p>
-            Die vier Kampfprinzipien lassen sich als kurze Handlungsanweisungen lesen. Sie
-            werden im Partnertraining Schritt für Schritt eingeübt.
-          </p>
           <div className="border-l-4 border-brand-yellow bg-[#f4f4f4] p-4 my-4">
-            <ol className="list-decimal pl-5 space-y-2 text-sm m-0">
-              <li><strong>Ist der Weg frei, gehe vor.</strong> Steht dir nichts entgegen, handle direkt.</li>
-              <li><strong>Ist der Weg versperrt, bleibe kleben.</strong> Nutze den Kontakt, um die Absicht des Partners zu spüren.</li>
-              <li><strong>Ist die Kraft des Gegners größer, gib nach.</strong> Leite den Druck um, statt starr dagegenzuhalten.</li>
-              <li><strong>Zieht der Gegner zurück, folge ihm.</strong> Verliere den Kontakt nicht und nutze die entstehende Öffnung.</li>
+            <h2 className="text-lg font-normal mb-2 leading-tight">Von vier Leitsätzen zu acht WT-Rifo-Kampfprinzipien</h2>
+            <p className="text-sm m-0">
+              Traditionell wird die Handlungslogik des Wing Chun häufig in vier Kampfprinzipien zusammengefasst. Sifu Jimmy Jemirifo hat diese Grundlage für das Wing Tschun Rifo zu acht differenzierten Prinzipien weiterentwickelt. Dadurch lassen sich die Übergänge zwischen direktem Handeln, Kontakt, Nachgeben und erneuter Initiative genauer vermitteln und trainieren.
+            </p>
+          </div>
+
+          <SectionTitle>Klar und direkt handeln</SectionTitle>
+          <p>
+            Im Wing Tschun Rifo wird nach einem einfachen und direkten Handlungsweg gesucht. Ist ein sinnvoller Weg frei, wird nicht unnötig gezögert oder über einen größeren Umweg gearbeitet. Direkt bedeutet dabei nicht hektisch oder aggressiv, sondern klar, koordiniert und der Situation angemessen.
+          </p>
+
+          <SectionTitle>Kontakt als Information nutzen</SectionTitle>
+          <p>
+            Trifft eine Bewegung auf Widerstand, wird der Kontakt nicht sofort aufgegeben. Über ihn können Druck, Richtung und Veränderungen wahrgenommen werden. Der Schüler lernt, aufmerksam zu bleiben und auf den nächsten Impuls zu reagieren, statt blind zurückzuziehen oder nur stärker zu drücken.
+          </p>
+
+          <SectionTitle>Nachgeben und handlungsfähig bleiben</SectionTitle>
+          <p>
+            Ist die einwirkende Kraft größer, ist starres Gegenhalten häufig ungünstig. Nachgeben bedeutet jedoch nicht, Haltung und Kontrolle vollständig aufzugeben. Ziel ist, den Druck zu verarbeiten, die Balance zu behalten und eine neue Handlungsmöglichkeit zu finden.
+          </p>
+
+          <SectionTitle>Den richtigen Moment nutzen</SectionTitle>
+          <p>
+            Wird ein Weg frei, kann die eigene Bewegung ohne unnötige Verzögerung fortgesetzt werden. Erfolgt kein verwertbarer Impuls, bleibt der Schüler nicht unbegrenzt passiv, sondern lernt, selbst einen passenden Weg zu schaffen. So wechseln Wahrnehmen und Handeln miteinander ab.
+          </p>
+
+          <div className="border-l-4 border-brand-yellow bg-[#f4f4f4] p-4 my-6">
+            <h2 className="text-lg font-normal mb-2 leading-tight">Prinzipien versteht man am besten in der Bewegung</h2>
+            <p className="text-sm mb-3">
+              Im Probetraining erlebst du, wie direkter Weg, Kontakt, Nachgeben und Timing praktisch geübt werden. Vorkenntnisse sind nicht erforderlich.
+            </p>
+            <Button to="/schulen" block>Standort für Probetraining wählen</Button>
+          </div>
+
+          <details className="border border-brand-gray-line bg-white p-4 my-4 text-sm">
+            <summary className="font-bold cursor-pointer">Alle acht WT-Rifo-Kampfprinzipien anzeigen</summary>
+            <ol className="list-decimal pl-5 space-y-2 mt-3">
+              <li>Alle Wege zum Gegner müssen geradlinig, gezielt und direkt sein.</li>
+              <li>Ist der geradlinige Weg zu deinem Gegner frei, greife ihn direkt an.</li>
+              <li>Stößt der Angriff auf Widerstand, bleib kleben.</li>
+              <li>Warte geduldig, um auf weitere Impulse zu reagieren.</li>
+              <li>Ist der Weg wieder frei, stoß vor.</li>
+              <li>Ist die Kraft des Gegners zu groß, gib nach.</li>
+              <li>Erfolgt kein Impuls: Mach den Weg frei, dann stoß vor.</li>
+              <li>Zieht sich der Gegner zurück, folge ihm. Greif ihn geradlinig, gezielt und direkt an.</li>
             </ol>
-          </div>
+            <p className="text-xs mt-3 mb-0">
+              Die Leitsätze beschreiben das Handeln innerhalb einer fortbestehenden Angriffssituation. „Folgen“ bedeutet nicht, einen bereits flüchtenden Menschen zu verfolgen.
+            </p>
+          </details>
 
-          <SectionTitle>Direkt und zielgerichtet handeln</SectionTitle>
+          <SectionTitle>Mit Kraft intelligent umgehen</SectionTitle>
           <p>
-            Unnötige Umwege kosten Zeit und erschweren die Kontrolle. Im Training wird
-            deshalb untersucht, welcher Weg in einer konkreten Situation einfach, stabil und
-            direkt ist. „Direkt“ bedeutet dabei nicht hektisch oder rücksichtslos, sondern
-            klar und ohne überflüssige Bewegung.
+            Die Kraftprinzipien erklären, wie eigene Spannung und gegnerischer Druck behandelt werden. Unnötige eigene Kraft wird gelöst, größerem gegnerischem Druck nicht starr entgegengewirkt und vorhandene Bewegung für eine eigene klare Aktion genutzt.
           </p>
+          <ol className="list-decimal pl-5 space-y-1 text-sm mb-4">
+            <li>Befreie dich von unnötiger eigener Kraft.</li>
+            <li>Befreie dich von der Kraft des Gegners.</li>
+            <li>Nutze die Kraft des Gegners.</li>
+            <li>Füge im richtigen Moment deine eigene Kraft hinzu.</li>
+          </ol>
 
-          <SectionTitle>Kontakt nicht sofort aufgeben</SectionTitle>
+          <SectionTitle>Training in unterschiedlichen Distanzen</SectionTitle>
           <p>
-            Trifft eine Bewegung auf Widerstand, liefert der Kontakt Informationen: Woher
-            kommt der Druck? In welche Richtung bewegt sich der Partner? Wo entsteht eine
-            Öffnung? Statt blind zurückzuziehen oder nur stärker zu drücken, wird gelernt,
-            diese Information zu nutzen.
+            Die Prinzipien werden in unterschiedlichen Distanzen trainiert – vom größeren Abstand bis zum engen Körperkontakt. Wie Formen, Chi Sao und Partnerübungen dabei zusammenspielen, erfährst du bei den Trainingsinhalten.
           </p>
-
-          <SectionTitle>Nachgeben, ohne zusammenzubrechen</SectionTitle>
-          <p>
-            Ist die einwirkende Kraft größer, ist starres Gegenhalten häufig ungünstig.
-            Nachgeben heißt im Wing Tschun nicht, die eigene Haltung vollständig aufzugeben.
-            Ziel ist, den Druck umzuleiten, die Balance zu behalten und handlungsfähig zu
-            bleiben.
+          <p className="mb-4">
+            <Button to="/trainingsinhalte">Trainingsinhalte kennenlernen</Button>
           </p>
-
-          <SectionTitle>Eine Öffnung konsequent nutzen</SectionTitle>
-          <p>
-            Wird ein Weg frei, soll die Reaktion nicht unnötig verzögert werden. In Übungen
-            geschieht das kontrolliert und mit klarer Absprache. Schnelligkeit entsteht
-            zunächst aus einer einfachen Entscheidung und einer gut koordinierten Bewegung –
-            nicht aus unkontrollierter Härte.
-          </p>
-
-          <SectionTitle>Die vier Kraftprinzipien</SectionTitle>
-          <p>
-            Die Kraftprinzipien beschreiben, wie mit eigener und fremder Energie umgegangen
-            wird.
-          </p>
-          <div className="border-l-4 border-brand-yellow bg-[#f4f4f4] p-4 my-4">
-            <ol className="list-decimal pl-5 space-y-2 text-sm m-0">
-              <li><strong>Befreie dich von der eigenen Kraft.</strong> Unnötige Spannung macht langsam und blockiert die Wahrnehmung.</li>
-              <li><strong>Befreie dich von der Kraft des Gegners.</strong> Halte nicht stur dagegen, sondern weiche der einwirkenden Richtung aus.</li>
-              <li><strong>Nutze die Kraft des Gegners.</strong> Leite seinen Druck um und richte ihn dorthin, wo er dir nützt.</li>
-              <li><strong>Setze die eigene Kraft hinzu.</strong> Ergänze die umgeleitete Energie mit einer eigenen, klaren Bewegung.</li>
-            </ol>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 my-4">
-            <article className="border border-brand-gray-line bg-[#f2f2f2] p-3">
-              <strong className="block mb-2">Unnötige eigene Spannung lösen</strong>
-              <p className="text-xs m-0">
-                Zu viel Muskelspannung macht Bewegungen langsam und vermindert die Wahrnehmung.
-              </p>
-            </article>
-            <article className="border border-brand-gray-line bg-[#f2f2f2] p-3">
-              <strong className="block mb-2">Die Richtung des Drucks erkennen</strong>
-              <p className="text-xs m-0">
-                Die Kraft des Partners wird nicht isoliert bekämpft, sondern als Information
-                über seine Bewegung genutzt.
-              </p>
-            </article>
-            <article className="border border-brand-gray-line bg-[#f2f2f2] p-3">
-              <strong className="block mb-2">Umleiten und ergänzen</strong>
-              <p className="text-xs m-0">
-                Die umgeleitete Energie des Partners wird mit einer eigenen, stabilen und
-                zielgerichteten Aktion verbunden.
-              </p>
-            </article>
-          </div>
-
-          <SectionTitle>Kampfdistanzen</SectionTitle>
-          <p>
-            Wing Tschun kennt vier Distanzen, in denen unterschiedliche Werkzeuge sinnvoll
-            sind. Im Training wird geübt, sie bewusst wahrzunehmen und zwischen ihnen zu
-            wechseln.
-          </p>
-          <ul className="list-disc pl-5 space-y-1 text-sm mb-4">
-            <li><strong>Trittdistanz:</strong> größter Abstand, Beintechniken sind das primäre Mittel.</li>
-            <li><strong>Faustdistanz:</strong> Handtechniken werden möglich, Beine wirken flankierend.</li>
-            <li><strong>Ellbogen- und Kniedistanz:</strong> kurze, kraftvolle Werkzeuge auf engem Raum.</li>
-            <li><strong>Anti-Grappling-Distanz:</strong> Körperkontakt, Kontrolle von Struktur und Balance.</li>
-          </ul>
 
           <Note>
-            <strong>Wichtig:</strong> Prinzipien sind keine Garantie für den Ausgang einer
-            realen Auseinandersetzung. Sie sind Lernwerkzeuge, die unter wechselnden
-            Bedingungen verantwortungsvoll erprobt werden müssen. Der beste Umgang mit
-            Konflikten bleibt Deeskalation – die eigene und fremde Sicherheit hat immer
-            Vorrang vor dem Anwenden von Techniken.
+            <strong>Wichtig:</strong> Prinzipien sind keine Garantie für den Ausgang einer realen Auseinandersetzung. Sie werden im Training kontrolliert und verantwortungsvoll erprobt. Aufmerksamkeit, Distanz, Deeskalation sowie die eigene und fremde Sicherheit haben Vorrang.
           </Note>
         </article>
         <DefaultAside />
