@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Note, Button } from "@/components/SiteLayout";
 import { LinkList } from "@/components/Sidebar";
-import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
+import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import probetraining from "@/assets/wt-rifo/probetraining.jpg";
 
 export const Route = createFileRoute("/kontakt")({
@@ -22,7 +22,7 @@ function Kontakt() {
   return (
     <SiteLayout
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Kontakt" }]}
-      banner={{ src: bannerHartWeich, label: "Kontakt" }}
+      banner={{ src: sifuBanner.url, label: "Kontakt" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>

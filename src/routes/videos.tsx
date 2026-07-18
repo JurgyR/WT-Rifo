@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { LinkList } from "@/components/Sidebar";
-import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
+import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import videoSifu from "@/assets/wt-rifo/video-sifu-jimmy-jemirifo.jpg";
 import videoMitte from "@/assets/wt-rifo/video-die-mitte-der-welt.jpg";
 
@@ -69,7 +69,7 @@ function Videos() {
   return (
     <SiteLayout
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Videos" }]}
-      banner={{ src: bannerHartWeich, label: "Videos" }}
+      banner={{ src: sifuBanner.url, label: "Videos" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, ProbetrainingBox } from "@/components/Sidebar";
-import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
+import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 
 export const Route = createFileRoute("/einsteiger")({
   head: () => ({
@@ -66,7 +66,7 @@ function Einsteiger() {
         { to: "/training", label: "Training" },
         { label: "Für Einsteiger" },
       ]}
-      banner={{ src: bannerHartWeich, label: "Für Einsteiger" }}
+      banner={{ src: sifuBanner.url, label: "Für Einsteiger" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
