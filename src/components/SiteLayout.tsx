@@ -8,7 +8,7 @@ const nav = [
   { to: "/training", label: "Training" },
   { to: "/videos", label: "Videos" },
   { to: "/schulen", label: "Schulen" },
-  { to: "/kontakt", label: "Kontakt" },
+  { to: "/kontakt", label: "Probetraining & Kontakt", highlight: true },
 ] as const;
 
 type Crumb = { to?: string; label: string };
