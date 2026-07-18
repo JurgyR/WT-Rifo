@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Missing, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, schulenLinks } from "@/components/Sidebar";
-import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
+import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import erwitteTraining from "@/assets/wt-rifo/erwitte-training.jpg.asset.json";
 
 export const Route = createFileRoute("/erwitte")({
@@ -39,7 +39,7 @@ function Erwitte() {
   return (
     <SiteLayout
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Schule Erwitte" }]}
-      banner={{ src: bannerGeduld, label: "Schule Erwitte" }}
+      banner={{ src: sifuBanner.url, label: "Schule Erwitte" }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>

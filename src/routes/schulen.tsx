@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, Button, Note } from "@/components/SiteLayout";
-import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
+import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 
 export const Route = createFileRoute("/schulen")({
   head: () => ({
@@ -41,7 +41,7 @@ function Schulen() {
   return (
     <SiteLayout
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Schulen" }]}
-      banner={{ src: bannerHartWeich, label: "Schulen" }}
+      banner={{ src: sifuBanner.url, label: "Schulen" }}
     >
       <h1 className="text-2xl sm:text-3xl font-normal mb-3">Schulen und Trainer</h1>
       <p className="mb-6">
