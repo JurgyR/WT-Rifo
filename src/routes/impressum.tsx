@@ -43,6 +43,10 @@ function Impressum() {
         </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Verantwortlich für den Inhalt</h2>
         <p>[Name und Anschrift eintragen]</p>
+        <h2 className="text-xl font-normal mt-6 mb-2">Erstellung der Website</h2>
+        <p>
+          Natürlich hat KI bei der Erstellung dieser Website geholfen. Im Wing Tschun nutzen wir, was funktioniert – beim Webdesign auch. Für die Inhalte stehen wir trotzdem ganz traditionell selbst ein.
+        </p>
         <p className="text-sm text-brand-gray mt-6">
           Diese Seite ist eine technische Vorlage und keine Rechtsberatung. Die Angaben müssen
           vor Veröffentlichung geprüft werden.
