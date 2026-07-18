@@ -61,7 +61,15 @@ function Kontakt() {
               <p className="text-sm mb-1">
                 <strong>Jürgen Potthoff</strong>
               </p>
-              <p className="text-sm mb-3">Kontaktangaben noch einzutragen.</p>
+              <p className="text-sm mb-3">
+                Montag und Donnerstag, 19:30–21:00 Uhr
+                <br />
+                An der Marienkirche 10, 59073 Hamm
+                <br />
+                <a href="tel:+4917664181156" className="underline hover:text-brand-gray">
+                  0176 6418 1156
+                </a>
+              </p>
               <Button to="/hamm">Zur Schule</Button>
             </article>
             <article className="border border-brand-gray-line bg-[#f0f0f0] p-4">
