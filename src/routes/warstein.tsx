@@ -68,8 +68,7 @@ function Warstein() {
             Du bist jederzeit herzlich zu einem{" "}
             <strong>kostenlosen und unverbindlichen Probetraining</strong> eingeladen. Komm
             einfach mittwochs oder freitags zur regulären Trainingszeit vorbei – eine
-            vorherige Anmeldung ist nicht notwendig. Sei möglichst einige Minuten vor 19:00
-            Uhr da, damit du dich in Ruhe umziehen und die Gruppe kennenlernen kannst.
+            vorherige Anmeldung ist nicht notwendig.
           </p>
           <Note>
             <strong>Probetraining in Warstein:</strong>
