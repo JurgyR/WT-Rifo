@@ -82,7 +82,7 @@ function Einsteiger() {
             Wähle die Schule deiner Wahl, prüfe Trainingszeit und Adresse und komm einfach zu
             einer regulären Trainingseinheit vorbei. Eine vorherige Anmeldung ist nicht
             notwendig. Sei möglichst einige Minuten vor Trainingsbeginn da, damit du dich in
-            Ruhe umziehen und den Trainer kennenlernen kannst. Verletzungen oder körperliche
+            Ruhe einfinden und den Trainer kennenlernen kannst. Verletzungen oder körperliche
             Einschränkungen solltest du dem Trainer vor Beginn mitteilen.
           </p>
 
