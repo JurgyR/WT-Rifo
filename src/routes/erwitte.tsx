@@ -64,9 +64,9 @@ function Erwitte() {
 
           <SectionTitle>Sei unser Gast</SectionTitle>
           <p>
-            Du bist jederzeit herzlich eingeladen, Unterricht, Gruppe und Trainingsweise bei
-            einem unverbindlichen Probetraining kennenzulernen. Komm einfach zu einer
-            regulären Trainingseinheit vorbei – eine vorherige Anmeldung ist nicht notwendig.
+            Du bist zu Beginn jeder regulären Trainingseinheit zu einem unverbindlichen
+            Probetraining eingeladen. Komm einfach vorbei – eine vorherige Anmeldung ist
+            nicht notwendig.
           </p>
           <Note>
             <strong>Probetraining in Erwitte:</strong>
