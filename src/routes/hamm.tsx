@@ -87,6 +87,11 @@ function Hamm() {
             <Button to="/einsteiger" block>
               Hinweise zum Probetraining
             </Button>
+            <div className="mt-2">
+              <Button href="https://www.wtrifo-hamm.de/" external variant="gray" block>
+                Website Hamm
+              </Button>
+            </div>
           </section>
           <LinkList title="Weitere Schulen" items={schulenLinks} />
         </aside>

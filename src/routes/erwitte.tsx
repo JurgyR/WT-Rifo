@@ -92,6 +92,11 @@ function Erwitte() {
             <Button to="/einsteiger" block>
               Hinweise zum Probetraining
             </Button>
+            <div className="mt-2">
+              <Button href="https://onlinestreet.de/poi/dkdpRkJqY1RUTTNrbysvN29SMFVYQT09" external variant="gray" block>
+                Website Erwitte
+              </Button>
+            </div>
           </section>
           <LinkList title="Weitere Schulen" items={schulenLinks} />
         </aside>
