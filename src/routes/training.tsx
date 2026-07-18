@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
-import bannerGeduld from "@/assets/wt-rifo/banner-geduld.jpg";
+import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 
 export const Route = createFileRoute("/training")({
   head: () => ({
