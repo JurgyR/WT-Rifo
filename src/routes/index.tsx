@@ -137,9 +137,9 @@ function Index() {
             Aufmerksamkeit und persönlicher Entwicklung.
           </p>
           <p className="mb-4">
-            Heute wird an drei Standorten trainiert: <strong>Erwitte</strong>,{" "}
-            <strong>Hamm</strong> und <strong>Warstein</strong>. Die Schulen werden von
-            erfahrenen Trainern persönlich geleitet.
+            Heute wird an zwei Standorten trainiert: <strong>Erwitte</strong> und{" "}
+            <strong>Warstein</strong>. Die Schulen werden von erfahrenen Trainern persönlich
+            geleitet.
           </p>
 
           <SectionTitle>
@@ -156,15 +156,6 @@ function Index() {
           >
             Training mit <strong>Erhard Jochem</strong>, montags und mittwochs von
             19:15–20:45 Uhr.
-          </NewsItem>
-          <NewsItem
-            img={hammTraining.url}
-            alt="Wing-Tschun-Partnertraining in Hamm"
-            to="/hamm"
-            title="Hamm"
-          >
-            Training mit <strong>Jürgen Potthoff</strong>, montags und donnerstags von
-            19:30–21:00 Uhr.
           </NewsItem>
           <NewsItem
             img={warsteinHome.url}
