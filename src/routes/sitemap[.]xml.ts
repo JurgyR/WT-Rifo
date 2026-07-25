@@ -12,7 +12,6 @@ const paths = [
   "/videos",
   "/schulen",
   "/erwitte",
-  "/hamm",
   "/warstein",
   "/einsteiger",
   "/kontakt",
