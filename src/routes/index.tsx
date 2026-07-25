@@ -6,7 +6,7 @@ import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
 import bannerMeister from "@/assets/wt-rifo/banner-meister.jpg";
 import bannerSifuJimmy from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import taoTeKing from "@/assets/wt-rifo/tao-te-king.jpg";
-import hammTraining from "@/assets/wt-rifo/hamm-training.jpg.asset.json";
+
 import technik from "@/assets/wt-rifo/technik.webp";
 import warsteinHome from "@/assets/wt-rifo/warstein-home.jpg.asset.json";
 import selbstverteidigung from "@/assets/wt-rifo/selbstverteidigung.webp";
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
+          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte und Warstein.",
       },
     ],
   }),
@@ -115,7 +115,7 @@ function Index() {
             Probetraining ohne Anmeldung
           </h2>
           <p className="text-sm m-0 mt-1">
-            Wähle Erwitte, Hamm oder Warstein und lerne das Training unverbindlich kennen.
+            Wähle Erwitte oder Warstein und lerne das Training unverbindlich kennen.
           </p>
         </div>
         <Button to="/schulen">Standort auswählen</Button>
