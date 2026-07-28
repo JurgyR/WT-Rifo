@@ -11,7 +11,7 @@ export const Route = createFileRoute("/kontakt")({
       {
         name: "description",
         content:
-          "Probetraining ohne Anmeldung und Kontakt zu den Wing Tschun Rifo Schulen in Erwitte und Warstein.",
+          "Probetraining ohne Anmeldung und Kontakt zu den Wing Tschun Rifo Schulen in Erwitte, Hamm und Warstein.",
       },
     ],
   }),
@@ -39,7 +39,7 @@ function Kontakt() {
             besondere Frage klären möchtest.
           </Note>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
             <article className="border border-brand-gray-line bg-[#f0f0f0] p-4">
               <h2 className="text-lg font-normal mb-2">Erwitte</h2>
               <p className="text-sm mb-1">
@@ -63,6 +63,30 @@ function Kontakt() {
                 </a>
               </p>
               <Button to="/erwitte">Zur Schule</Button>
+            </article>
+            <article className="border border-brand-gray-line bg-[#f0f0f0] p-4">
+              <h2 className="text-lg font-normal mb-2">Hamm</h2>
+              <p className="text-sm mb-1">
+                <strong>Jürgen Potthoff</strong>
+              </p>
+              <p className="text-sm mb-3">
+                Montag und Donnerstag, 19:30–21:00 Uhr
+                <br />
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=An+der+Marienkirche+10%2C+59073+Hamm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Route zu WT-Rifo Hamm in Google Maps öffnen – externer Link"
+                  className="underline hover:text-brand-gray"
+                >
+                  An der Marienkirche 10, 59073 Hamm ↗
+                </a>
+                <br />
+                <a href="tel:+4917664181156" className="underline hover:text-brand-gray">
+                  0176 6418 1156
+                </a>
+              </p>
+              <Button to="/hamm">Zur Schule</Button>
             </article>
             <article className="border border-brand-gray-line bg-[#f0f0f0] p-4">
               <h2 className="text-lg font-normal mb-2">Warstein</h2>

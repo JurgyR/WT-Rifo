@@ -41,6 +41,7 @@ export const einsteigerLinks = [
 
 export const schulenLinks = [
   { to: "/erwitte", label: "Erwitte · Erhard Jochem" },
+  { to: "/hamm", label: "Hamm · Jürgen Potthoff" },
   { to: "/warstein", label: "Warstein · Jürgen Reuter" },
 ];
 

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/schulen")({
       {
         name: "description",
         content:
-          "Wing Tschun Rifo Schulen in Erwitte und Warstein mit den jeweiligen Trainern.",
+          "Wing Tschun Rifo Schulen in Erwitte, Hamm und Warstein mit den jeweiligen Trainern.",
       },
     ],
   }),
@@ -22,6 +22,12 @@ const schools = [
     trainer: "Erhard Jochem",
     body: "Training montags und mittwochs von 19:15 bis 20:45 Uhr in Erwitte. Schulleitung: Erhard Jochem.",
     to: "/erwitte",
+  },
+  {
+    name: "Hamm",
+    trainer: "Jürgen Potthoff",
+    body: "Training montags und donnerstags von 19:30 bis 21:00 Uhr in Hamm. Schulleitung: Jürgen Potthoff.",
+    to: "/hamm",
   },
   {
     name: "Warstein",
@@ -39,10 +45,10 @@ function Schulen() {
     >
       <h1 className="text-2xl sm:text-3xl font-normal mb-3">Schulen und Trainer</h1>
       <p className="mb-6">
-        Die Wing Tschun Rifo Organisation ist aktuell an zwei Standorten vertreten.
+        Die Wing Tschun Rifo Organisation ist aktuell an drei Standorten vertreten.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         {schools.map((s) => (
           <article key={s.name} className="border border-brand-gray-line bg-[#f3f3f3] flex flex-col">
             <header className="bg-brand-gray text-white p-3 border-b-4 border-brand-yellow">

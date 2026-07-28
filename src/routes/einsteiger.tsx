@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: "Was kosten Training und Mitgliedschaft?",
-    a: "Beiträge, mögliche Probeangebote und Vertragsbedingungen können sich ändern. Verbindliche aktuelle Angaben erhältst du direkt bei der Schule in Erwitte oder Warstein.",
+    a: "Beiträge, mögliche Probeangebote und Vertragsbedingungen können sich ändern. Verbindliche aktuelle Angaben erhältst du direkt bei der Schule in Erwitte, Hamm oder Warstein.",
   },
 ];
 

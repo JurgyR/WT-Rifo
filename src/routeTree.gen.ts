@@ -19,6 +19,7 @@ import { Route as SchulenRouteImport } from './routes/schulen'
 import { Route as PrinzipienRouteImport } from './routes/prinzipien'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as HammRouteImport } from './routes/hamm'
 import { Route as ErwitteRouteImport } from './routes/erwitte'
 import { Route as EinsteigerRouteImport } from './routes/einsteiger'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
@@ -74,6 +75,11 @@ const ImpressumRoute = ImpressumRouteImport.update({
   path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HammRoute = HammRouteImport.update({
+  id: '/hamm',
+  path: '/hamm',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ErwitteRoute = ErwitteRouteImport.update({
   id: '/erwitte',
   path: '/erwitte',
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/datenschutz': typeof DatenschutzRoute
   '/einsteiger': typeof EinsteigerRoute
   '/erwitte': typeof ErwitteRoute
+  '/hamm': typeof HammRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/prinzipien': typeof PrinzipienRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/datenschutz': typeof DatenschutzRoute
   '/einsteiger': typeof EinsteigerRoute
   '/erwitte': typeof ErwitteRoute
+  '/hamm': typeof HammRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/prinzipien': typeof PrinzipienRoute
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/datenschutz': typeof DatenschutzRoute
   '/einsteiger': typeof EinsteigerRoute
   '/erwitte': typeof ErwitteRoute
+  '/hamm': typeof HammRoute
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/prinzipien': typeof PrinzipienRoute
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/datenschutz'
     | '/einsteiger'
     | '/erwitte'
+    | '/hamm'
     | '/impressum'
     | '/kontakt'
     | '/prinzipien'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/datenschutz'
     | '/einsteiger'
     | '/erwitte'
+    | '/hamm'
     | '/impressum'
     | '/kontakt'
     | '/prinzipien'
@@ -183,6 +194,7 @@ export interface FileRouteTypes {
     | '/datenschutz'
     | '/einsteiger'
     | '/erwitte'
+    | '/hamm'
     | '/impressum'
     | '/kontakt'
     | '/prinzipien'
@@ -200,6 +212,7 @@ export interface RootRouteChildren {
   DatenschutzRoute: typeof DatenschutzRoute
   EinsteigerRoute: typeof EinsteigerRoute
   ErwitteRoute: typeof ErwitteRoute
+  HammRoute: typeof HammRoute
   ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
   PrinzipienRoute: typeof PrinzipienRoute
@@ -284,6 +297,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hamm': {
+      id: '/hamm'
+      path: '/hamm'
+      fullPath: '/hamm'
+      preLoaderRoute: typeof HammRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/erwitte': {
       id: '/erwitte'
       path: '/erwitte'
@@ -320,6 +340,7 @@ const rootRouteChildren: RootRouteChildren = {
   DatenschutzRoute: DatenschutzRoute,
   EinsteigerRoute: EinsteigerRoute,
   ErwitteRoute: ErwitteRoute,
+  HammRoute: HammRoute,
   ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
   PrinzipienRoute: PrinzipienRoute,
