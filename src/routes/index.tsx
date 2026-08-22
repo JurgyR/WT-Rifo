@@ -117,16 +117,25 @@ function NewsItem({
 function Index() {
   return (
     <SiteLayout>
+      <JsonLd
+        data={() => [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Wing Tschun Rifo",
+            url: originUrl("/"),
+            inLanguage: "de-DE",
+          },
+        ]}
+      />
       <HeroSlider />
 
       <section
-        aria-labelledby="cta-title"
+        aria-label="Probetraining ohne Anmeldung"
         className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-l-4 border-brand-yellow bg-[#f2f1ed] p-4"
       >
         <div>
-          <h2 id="cta-title" className="text-lg font-bold m-0">
-            Probetraining ohne Anmeldung
-          </h2>
+          <p className="text-lg font-bold m-0">Probetraining ohne Anmeldung</p>
           <p className="text-sm m-0 mt-1">
             Wähle Erwitte, Hamm oder Warstein und lerne das Training unverbindlich kennen.
           </p>
@@ -140,11 +149,16 @@ function Index() {
           <img
             src={taoTeKing}
             alt="Wing-Tschun-Training und ein Gedanke aus dem Tao Te King"
+            width={720}
+            height={405}
+            loading="lazy"
+            decoding="async"
             className="w-full mb-4"
           />
           <h1 id="welcome-title" className="text-2xl sm:text-3xl font-normal mb-3 leading-tight">
-            Willkommen bei Wing Tschun Rifo
+            Wing Tschun Rifo in Erwitte, Hamm und Warstein
           </h1>
+
           <p className="text-base leading-relaxed mb-3">
             Wing Tschun Rifo verbindet praktische Selbstverteidigung mit Körpergefühl,
             Aufmerksamkeit und persönlicher Entwicklung.
