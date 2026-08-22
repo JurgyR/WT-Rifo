@@ -142,6 +142,10 @@ function Kontakt() {
             <img
               src={probetraining}
               alt="Wing Tschun Rifo Training"
+              width={260}
+              height={160}
+              loading="lazy"
+              decoding="async"
               className="w-full h-40 object-cover mb-3"
             />
             <p className="text-sm">

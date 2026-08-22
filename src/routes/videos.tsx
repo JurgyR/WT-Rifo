@@ -45,6 +45,10 @@ function VideoCard({
         <img
           src={img}
           alt={alt}
+          width={480}
+          height={270}
+          loading="lazy"
+          decoding="async"
           className={`w-full h-full ${portrait ? "object-contain bg-[#e7e7e7]" : "object-cover"}`}
         />
         <span
