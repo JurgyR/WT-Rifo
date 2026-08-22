@@ -91,8 +91,17 @@ function NewsItem({
   return (
     <article className="grid grid-cols-[110px_1fr] sm:grid-cols-[150px_1fr] gap-3 pb-4 mb-4 border-b border-[#ddd] last:border-b-0">
       <Link to={to} aria-label={title} className="block">
-        <img src={img} alt={alt} className="w-full h-20 sm:h-24 object-cover hover:opacity-90 transition-opacity" />
+        <img
+          src={img}
+          alt={alt}
+          width={300}
+          height={192}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-20 sm:h-24 object-cover hover:opacity-90 transition-opacity"
+        />
       </Link>
+
       <div>
         <h3 className="font-bold text-sm mb-1">
           <Link to={to} className="hover:underline">
