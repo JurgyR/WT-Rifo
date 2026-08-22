@@ -1,3 +1,5 @@
+import { seoMeta, breadcrumbList, sportsActivityLocation } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
@@ -7,13 +9,11 @@ import juergenPotthoff from "@/assets/wt-rifo/juergen-potthoff.jpg.asset.json";
 
 export const Route = createFileRoute("/hamm")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Hamm | Jürgen Potthoff" },
-      {
-        name: "description",
-        content: "Wing Tschun Rifo in Hamm unter der Leitung von Jürgen Potthoff.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Hamm – Probetraining | WT Rifo",
+      description:
+        "Wing Tschun in Hamm mit Jürgen Potthoff: Training montags und donnerstags, kostenloses Probetraining ohne Anmeldung.",
+    }),
   }),
   component: Hamm,
 });
@@ -41,11 +41,32 @@ function Hamm() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Schule Hamm" }]}
       banner={{ src: sifuBanner.url, label: "Schule Hamm" }}
     >
+      <JsonLd
+        data={() => [
+          sportsActivityLocation({
+            name: "Wing Tschun Hamm",
+            path: "/hamm",
+            street: "An der Marienkirche 10",
+            postalCode: "59073",
+            city: "Hamm",
+            telephone: "+4917664181156",
+            image: juergenPotthoff.url,
+            openingHours: { days: ["Monday", "Thursday"], opens: "19:30", closes: "21:00" },
+          }),
+          breadcrumbList([
+            { name: "Startseite", path: "/" },
+            { name: "Schule Hamm", path: "/hamm" },
+          ]),
+        ]}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-3">Wing Tschun in Hamm</h1>
           <p className="mb-4">
-            Die Schule in Hamm wird von <strong>Jürgen Potthoff</strong> geleitet.
+            Die Schule in Hamm trainiert montags und donnerstags unter der Leitung von{" "}
+            <strong>Jürgen Potthoff</strong>. Der Unterricht findet An der Marienkirche 10
+            statt. Ein kostenloses und unverbindliches Probetraining ist ohne Anmeldung
+            möglich; Vorkenntnisse sind nicht erforderlich.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse mb-4">
@@ -87,7 +108,7 @@ function Hamm() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Hamm</h2>
-            <img src={juergenPotthoff.url} alt="Jürgen Potthoff, Schulleitung Hamm" className="w-full mb-3" />
+            <img src={juergenPotthoff.url} alt="Jürgen Potthoff, Schulleitung Hamm" width={260} height={195} loading="lazy" decoding="async" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />

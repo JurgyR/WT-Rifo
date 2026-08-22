@@ -1,3 +1,5 @@
+import { seoMeta, breadcrumbList } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { LinkList } from "@/components/Sidebar";
@@ -7,14 +9,11 @@ import videoMitte from "@/assets/wt-rifo/video-die-mitte-der-welt.jpg";
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
-    meta: [
-      { title: "Videos | Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Ausgewählte Videos der Wing Tschun Rifo Organisation mit Einblicken in Training und Lehrgänge.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Rifo Videos: Training & Lehrgänge",
+      description:
+        "Ausgewählte Videos von Wing Tschun Rifo mit Einblicken in Training, Lehrgänge und die Arbeit von Sifu Jimmy Jemirifo.",
+    }),
   }),
   component: Videos,
 });
@@ -47,6 +46,10 @@ function VideoCard({
         <img
           src={img}
           alt={alt}
+          width={480}
+          height={270}
+          loading="lazy"
+          decoding="async"
           className={`w-full h-full ${portrait ? "object-contain bg-[#e7e7e7]" : "object-cover"}`}
         />
         <span
@@ -71,6 +74,7 @@ function Videos() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Videos" }]}
       banner={{ src: sifuBanner.url, label: "Videos" }}
     >
+      <JsonLd data={() => [breadcrumbList([{ name: "Startseite", path: "/" }, { name: "Videos", path: "/videos" }])]} />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-4">

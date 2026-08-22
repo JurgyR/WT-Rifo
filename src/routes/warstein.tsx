@@ -1,3 +1,5 @@
+import { seoMeta, breadcrumbList, sportsActivityLocation } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
@@ -7,14 +9,11 @@ import warsteinTraining from "@/assets/wt-rifo/warstein-training.jpg.asset.json"
 
 export const Route = createFileRoute("/warstein")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Warstein | Jürgen Reuter" },
-      {
-        name: "description",
-        content:
-          "Wing Tschun Rifo in Warstein mit Jürgen Reuter. Kostenloses Probetraining ohne Anmeldung, mittwochs und freitags 19:00–20:30 Uhr.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Warstein – Probetraining | WT Rifo",
+      description:
+        "Wing Tschun in Warstein mit Jürgen Reuter: mittwochs und freitags 19:00–20:30 Uhr, kostenloses Probetraining ohne Anmeldung.",
+    }),
   }),
   component: Warstein,
 });
@@ -42,11 +41,32 @@ function Warstein() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Schule Warstein" }]}
       banner={{ src: sifuBanner.url, label: "Schule Warstein" }}
     >
+      <JsonLd
+        data={() => [
+          sportsActivityLocation({
+            name: "Wing Tschun Warstein",
+            path: "/warstein",
+            street: "Auf'm Bruch 12",
+            postalCode: "59581",
+            city: "Warstein",
+            telephone: "+491752071953",
+            image: warsteinTraining.url,
+            openingHours: { days: ["Wednesday", "Friday"], opens: "19:00", closes: "20:30" },
+          }),
+          breadcrumbList([
+            { name: "Startseite", path: "/" },
+            { name: "Schule Warstein", path: "/warstein" },
+          ]),
+        ]}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-3">Wing Tschun in Warstein</h1>
           <p className="mb-4">
-            Die Schule in Warstein wird von <strong>Jürgen Reuter</strong> geleitet.
+            In Warstein leitet <strong>Jürgen Reuter</strong> das Training mittwochs und
+            freitags am Standort Auf'm Bruch 12. Interessierte können kostenlos und ohne
+            Anmeldung an einer regulären Trainingseinheit teilnehmen und Wing Tschun
+            praktisch kennenlernen.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse mb-4">
@@ -90,7 +110,7 @@ function Warstein() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Warstein</h2>
-            <img src={warsteinTraining.url} alt="Chi-Sao-Training in Warstein" className="w-full mb-3" />
+            <img src={warsteinTraining.url} alt="Chi-Sao-Training in Warstein" width={260} height={195} loading="lazy" decoding="async" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />

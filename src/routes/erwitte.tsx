@@ -1,3 +1,5 @@
+import { seoMeta, originUrl, breadcrumbList, sportsActivityLocation } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
@@ -7,13 +9,11 @@ import erwitteTraining from "@/assets/wt-rifo/erwitte-training.jpg.asset.json";
 
 export const Route = createFileRoute("/erwitte")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Erwitte | Erhard Jochem" },
-      {
-        name: "description",
-        content: "Wing Tschun Rifo in Erwitte unter der Leitung von Erhard Jochem.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Erwitte – Probetraining | WT Rifo",
+      description:
+        "Wing Tschun in Erwitte mit Erhard Jochem: Training montags und mittwochs, kostenloses Probetraining ohne Anmeldung am Hellweg 2.",
+    }),
   }),
   component: Erwitte,
 });
@@ -28,9 +28,9 @@ const rows: [string, string | ReactNode][] = [
       0170 2088 949
     </a>
   )],
-  ["Adresse auf Onlinestreet anzeigen", (
-    <a href="https://onlinestreet.de/poi/dkdpRkJqY1RUTTNrbysvN29SMFVYQT09" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-gray">
-      onlinestreet.de
+  ["Anfahrt", (
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Hellweg+2%2C+59597+Erwitte" target="_blank" rel="noopener noreferrer" aria-label="Route zu Wing Tschun Erwitte in Google Maps öffnen – externer Link" className="underline hover:text-brand-gray">
+      Anfahrt zu Wing Tschun Erwitte ↗
     </a>
   )],
 ];
@@ -41,11 +41,32 @@ function Erwitte() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Schule Erwitte" }]}
       banner={{ src: sifuBanner.url, label: "Schule Erwitte" }}
     >
+      <JsonLd
+        data={() => [
+          sportsActivityLocation({
+            name: "Wing Tschun Erwitte",
+            path: "/erwitte",
+            street: "Hellweg 2",
+            postalCode: "59597",
+            city: "Erwitte",
+            telephone: "+491702088949",
+            image: erwitteTraining.url,
+            openingHours: { days: ["Monday", "Wednesday"], opens: "19:15", closes: "20:45" },
+          }),
+          breadcrumbList([
+            { name: "Startseite", path: "/" },
+            { name: "Schule Erwitte", path: "/erwitte" },
+          ]),
+        ]}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-3">Wing Tschun in Erwitte</h1>
           <p className="mb-4">
-            Die Schule in Erwitte wird von <strong>Erhard Jochem</strong> geleitet.
+            In Erwitte kannst du Wing Tschun montags und mittwochs mit{" "}
+            <strong>Erhard Jochem</strong> kennenlernen. Trainiert wird am Hellweg 2. Beim
+            kostenlosen Probetraining steigst du ohne Vorkenntnisse und ohne vorherige
+            Anmeldung direkt in eine reguläre Trainingseinheit ein.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse mb-4">
@@ -88,7 +109,7 @@ function Erwitte() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Erwitte</h2>
-            <img src={erwitteTraining.url} alt="Wing-Tschun-Training in Erwitte" className="w-full mb-3" />
+            <img src={erwitteTraining.url} alt="Wing-Tschun-Training in Erwitte" width={260} height={195} loading="lazy" decoding="async" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />
@@ -102,8 +123,8 @@ function Erwitte() {
               Hinweise zum Probetraining
             </Button>
             <div className="mt-2">
-              <Button href="https://onlinestreet.de/poi/dkdpRkJqY1RUTTNrbysvN29SMFVYQT09" external variant="gray" block>
-                Website Erwitte
+              <Button href="https://www.google.com/maps/dir/?api=1&destination=Hellweg+2%2C+59597+Erwitte" external variant="gray" block>
+                Anfahrt zu Wing Tschun Erwitte
               </Button>
             </div>
           </section>

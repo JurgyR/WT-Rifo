@@ -1,3 +1,5 @@
+import { seoMeta, breadcrumbList } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
@@ -5,14 +7,11 @@ import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.js
 
 export const Route = createFileRoute("/training")({
   head: () => ({
-    meta: [
-      { title: "Training | Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Ablauf des Wing-Tschun-Trainings: Grundlagen, Formen, Partnerübungen, Chi Sao und Hinweise für den ersten Besuch.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing-Tschun-Training: Ablauf & Inhalte | WT Rifo",
+      description:
+        "So läuft das Wing-Tschun-Training ab: Grundlagen, Formen, Chi Sao und Partnerübungen für Anfänger und Fortgeschrittene.",
+    }),
   }),
   component: Training,
 });
@@ -54,6 +53,7 @@ function Training() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Training" }]}
       banner={{ src: sifuBanner.url, label: "Training" }}
     >
+      <JsonLd data={() => [breadcrumbList([{ name: "Startseite", path: "/" }, { name: "Training", path: "/training" }])]} />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-4">So läuft das Training ab</h1>

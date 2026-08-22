@@ -1,3 +1,5 @@
+import { seoMeta, breadcrumbList } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
@@ -5,23 +7,11 @@ import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.js
 
 export const Route = createFileRoute("/prinzipien")({
   head: () => ({
-    meta: [
-      { title: "Prinzipien im Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: direkt handeln, Kontakt nutzen, nachgeben und im richtigen Moment reagieren.",
-      },
-      {
-        property: "og:title",
-        content: "Prinzipien im Wing Tschun Rifo",
-      },
-      {
-        property: "og:description",
-        content:
-          "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: direkt handeln, Kontakt nutzen, nachgeben und im richtigen Moment reagieren.",
-      },
-    ],
+    meta: seoMeta({
+      title: "8 Prinzipien im Wing Tschun Rifo",
+      description:
+        "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: Kontakt, Nachgeben, Timing und kontrolliertes Handeln.",
+    }),
   }),
   component: Prinzipien,
 });
@@ -36,6 +26,7 @@ function Prinzipien() {
       ]}
       banner={{ src: sifuBanner.url, label: "Prinzipien" }}
     >
+      <JsonLd data={() => [breadcrumbList([{ name: "Startseite", path: "/" }, { name: "Wing Tschun", path: "/wing-tschun" }, { name: "Prinzipien", path: "/prinzipien" }])]} />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-3">Prinzipien im Wing Tschun</h1>

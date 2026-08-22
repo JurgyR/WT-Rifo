@@ -1,3 +1,5 @@
+import { seoMeta, originUrl } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
@@ -15,14 +17,11 @@ import videoSifu from "@/assets/wt-rifo/video-sifu-jimmy-jemirifo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Rifo | Kampfkunst in Erwitte, Hamm & Warstein",
+      description:
+        "Wing Tschun Rifo in Erwitte, Hamm und Warstein: Selbstverteidigung, Körpergefühl und kostenloses Probetraining ohne Anmeldung.",
+    }),
   }),
   component: Index,
 });
@@ -52,9 +51,15 @@ function HeroSlider() {
           key={idx}
           src={s.src}
           alt={s.alt}
+          width={960}
+          height={420}
+          loading={idx === 0 ? "eager" : "lazy"}
+          decoding={idx === 0 ? "sync" : "async"}
+          fetchPriority={idx === 0 ? "high" : "low"}
           className={`absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
+
       <div className="absolute right-3 top-3 flex gap-2 z-10">
         {slides.map((_, idx) => (
           <button
@@ -87,8 +92,17 @@ function NewsItem({
   return (
     <article className="grid grid-cols-[110px_1fr] sm:grid-cols-[150px_1fr] gap-3 pb-4 mb-4 border-b border-[#ddd] last:border-b-0">
       <Link to={to} aria-label={title} className="block">
-        <img src={img} alt={alt} className="w-full h-20 sm:h-24 object-cover hover:opacity-90 transition-opacity" />
+        <img
+          src={img}
+          alt={alt}
+          width={300}
+          height={192}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-20 sm:h-24 object-cover hover:opacity-90 transition-opacity"
+        />
       </Link>
+
       <div>
         <h3 className="font-bold text-sm mb-1">
           <Link to={to} className="hover:underline">
@@ -104,16 +118,25 @@ function NewsItem({
 function Index() {
   return (
     <SiteLayout>
+      <JsonLd
+        data={() => [
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Wing Tschun Rifo",
+            url: originUrl("/"),
+            inLanguage: "de-DE",
+          },
+        ]}
+      />
       <HeroSlider />
 
       <section
-        aria-labelledby="cta-title"
+        aria-label="Probetraining ohne Anmeldung"
         className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-l-4 border-brand-yellow bg-[#f2f1ed] p-4"
       >
         <div>
-          <h2 id="cta-title" className="text-lg font-bold m-0">
-            Probetraining ohne Anmeldung
-          </h2>
+          <p className="text-lg font-bold m-0">Probetraining ohne Anmeldung</p>
           <p className="text-sm m-0 mt-1">
             Wähle Erwitte, Hamm oder Warstein und lerne das Training unverbindlich kennen.
           </p>
@@ -127,11 +150,16 @@ function Index() {
           <img
             src={taoTeKing}
             alt="Wing-Tschun-Training und ein Gedanke aus dem Tao Te King"
+            width={720}
+            height={405}
+            loading="lazy"
+            decoding="async"
             className="w-full mb-4"
           />
           <h1 id="welcome-title" className="text-2xl sm:text-3xl font-normal mb-3 leading-tight">
-            Willkommen bei Wing Tschun Rifo
+            Wing Tschun Rifo in Erwitte, Hamm und Warstein
           </h1>
+
           <p className="text-base leading-relaxed mb-3">
             Wing Tschun Rifo verbindet praktische Selbstverteidigung mit Körpergefühl,
             Aufmerksamkeit und persönlicher Entwicklung.
@@ -186,6 +214,10 @@ function Index() {
           <img
             src={selbstverteidigung}
             alt="Wing-Tschun-Selbstverteidigung"
+            width={260}
+            height={195}
+            loading="lazy"
+            decoding="async"
             className="w-full mb-3"
           />
           <p className="text-sm mb-4">
@@ -214,7 +246,7 @@ function Index() {
             className="relative block overflow-hidden mb-3"
             aria-label="Video WT-Rifo Sifu Jimmy Jemirifo auf YouTube öffnen"
           >
-            <img src={videoSifu} alt="Trainingsszene WT-Rifo Sifu Jimmy Jemirifo" className="w-full" />
+            <img src={videoSifu} alt="Trainingsszene WT-Rifo Sifu Jimmy Jemirifo" width={260} height={146} loading="lazy" decoding="async" className="w-full" />
             <span className="absolute left-2 bottom-2 bg-brand-gray/90 text-white text-xs font-bold px-2 py-1 border-l-4 border-brand-yellow">
               Video ansehen
             </span>
@@ -234,6 +266,10 @@ function Index() {
             <img
               src={probetraining}
               alt="Training der Wing Tschun Rifo Organisation"
+              width={260}
+              height={160}
+              loading="lazy"
+              decoding="async"
               className="w-full h-40 object-cover mb-3"
             />
             <p className="text-sm mb-3">

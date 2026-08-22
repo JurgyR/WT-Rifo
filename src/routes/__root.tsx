@@ -10,6 +10,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import ogImage from "../assets/wt-rifo/banner-hart-weich.jpg";
+import { seoMeta } from "../lib/seo";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -77,25 +79,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
+      ...seoMeta({
+        title: "Wing Tschun Rifo",
+        description:
           "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
-      },
+      }),
       { name: "theme-color", content: "#4d4e53" },
-      { property: "og:title", content: "Wing Tschun Rifo" },
-      {
-        property: "og:description",
-        content: "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
-      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Wing Tschun Rifo" },
+      { property: "og:locale", content: "de_DE" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Wing Tschun Rifo" },
-      { name: "twitter:description", content: "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d311059e-e1e3-43cf-8772-c9ab1ed4f5f1/id-preview-477ba954--16fb2e1e-a06b-420d-968b-509b8d6db979.lovable.app-1784148907544.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d311059e-e1e3-43cf-8772-c9ab1ed4f5f1/id-preview-477ba954--16fb2e1e-a06b-420d-968b-509b8d6db979.lovable.app-1784148907544.png" },
+      { property: "og:image", content: ogImage },
+      { name: "twitter:image", content: ogImage },
     ],
+
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
