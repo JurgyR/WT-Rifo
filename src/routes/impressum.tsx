@@ -22,11 +22,15 @@ function Impressum() {
         <h1 className="text-2xl sm:text-3xl font-normal mb-3">Impressum</h1>
         <h2 className="text-xl font-normal mt-6 mb-2">Angaben gemäß § 5 DDG</h2>
         <p>
-          Joseph Jemirifo
+          Jürgen Reuter
           <br />
-          Im Möhnetal 11
+          Wing Tschun Rifo Kampfkunstschule Warstein
           <br />
-          59519 Möhnesee
+          Mörikeweg 24
+          <br />
+          59555 Lippstadt
+          <br />
+          Deutschland
         </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Vertreten durch</h2>
         <p>Jürgen Reuter</p>
