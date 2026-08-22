@@ -38,13 +38,17 @@ function Impressum() {
           <br />
           E-Mail: juergenreuter@web.de
         </p>
-        <h2 className="text-xl font-normal mt-6 mb-2">Verantwortlich für den Inhalt</h2>
+        <h2 className="text-xl font-normal mt-6 mb-2">Verantwortlich für journalistisch-redaktionelle Inhalte</h2>
         <p>
           Jürgen Reuter
           <br />
           Mörikeweg 24
           <br />
           59555 Lippstadt
+        </p>
+        <h2 className="text-xl font-normal mt-6 mb-2">Verbraucherstreitbeilegung</h2>
+        <p>
+          Der Betreiber ist weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
         </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Erstellung der Website</h2>
         <p>
