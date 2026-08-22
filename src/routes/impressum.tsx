@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, Missing } from "@/components/SiteLayout";
+import { SiteLayout } from "@/components/SiteLayout";
 import bannerMeister from "@/assets/wt-rifo/banner-meister.jpg";
 
 export const Route = createFileRoute("/impressum")({
@@ -7,6 +7,10 @@ export const Route = createFileRoute("/impressum")({
     meta: [
       { title: "Impressum | Wing Tschun Rifo" },
       { name: "description", content: "Impressum der Wing Tschun Rifo Website." },
+      { property: "og:title", content: "Impressum | Wing Tschun Rifo" },
+      { property: "og:description", content: "Impressum der Wing Tschun Rifo Website." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Impressum,
@@ -20,25 +24,31 @@ function Impressum() {
     >
       <article className="max-w-3xl">
         <h1 className="text-2xl sm:text-3xl font-normal mb-3">Impressum</h1>
+
         <h2 className="text-xl font-normal mt-6 mb-2">Angaben gemäß § 5 DDG</h2>
         <p>
           Jürgen Reuter
           <br />
-          Wing Tschun Rifo Kampfkunstschule Warstein
+          Wing Tschun Rifo
           <br />
           Mörikeweg 24
           <br />
           59555 Lippstadt
-          <br />
-          Deutschland
         </p>
+
         <h2 className="text-xl font-normal mt-6 mb-2">Kontakt</h2>
         <p>
-          Telefon: 0175 207 1953
+          Telefon: <a href="tel:+491752071953" className="underline hover:text-brand-gray">0175 2071953</a>
           <br />
-          E-Mail: juergenreuter@web.de
+          E-Mail:{" "}
+          <a href="mailto:juergenreuter@web.de" className="underline hover:text-brand-gray">
+            juergenreuter@web.de
+          </a>
         </p>
-        <h2 className="text-xl font-normal mt-6 mb-2">Verantwortlich für journalistisch-redaktionelle Inhalte</h2>
+
+        <h2 className="text-xl font-normal mt-6 mb-2">
+          Verantwortlich für journalistisch-redaktionelle Inhalte gemäß § 18 Abs. 2 MStV
+        </h2>
         <p>
           Jürgen Reuter
           <br />
@@ -46,13 +56,18 @@ function Impressum() {
           <br />
           59555 Lippstadt
         </p>
+
+        <h2 className="text-xl font-normal mt-6 mb-2">Selbstständige Schulen</h2>
+        <p>
+          Die auf dieser Website genannten Schulen und Standorte werden von den jeweils
+          angegebenen Betreibern rechtlich selbstständig geführt. Jürgen Reuter ist Betreiber
+          dieses Internetauftritts, jedoch nicht automatisch Betreiber der verlinkten Schulen.
+        </p>
+
         <h2 className="text-xl font-normal mt-6 mb-2">Verbraucherstreitbeilegung</h2>
         <p>
-          Der Betreiber ist weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-        </p>
-        <h2 className="text-xl font-normal mt-6 mb-2">Erstellung der Website</h2>
-        <p>
-          Natürlich hat KI bei der Erstellung dieser Website geholfen. Im Wing Tschun nutzen wir, was funktioniert – beim Webdesign auch. Für die Inhalte stehen wir trotzdem ganz traditionell selbst ein.
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+          Verbraucherschlichtungsstelle teilzunehmen.
         </p>
       </article>
     </SiteLayout>
