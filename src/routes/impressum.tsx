@@ -20,29 +20,30 @@ function Impressum() {
     >
       <article className="max-w-3xl">
         <h1 className="text-2xl sm:text-3xl font-normal mb-3">Impressum</h1>
-        <Missing>
-          <strong>Vor Veröffentlichung vervollständigen:</strong> Betreibername beziehungsweise
-          Rechtsform, ladungsfähige Anschrift, vertretungsberechtigte Person, E-Mail-Adresse,
-          Telefonnummer und gegebenenfalls Register- oder Umsatzsteuerangaben.
-        </Missing>
         <h2 className="text-xl font-normal mt-6 mb-2">Angaben gemäß § 5 DDG</h2>
         <p>
-          [Vollständiger Betreibername]
+          Joseph Jemirifo
           <br />
-          [Straße und Hausnummer]
+          Im Möhnetal 11
           <br />
-          [PLZ und Ort]
+          59519 Möhnesee
         </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Vertreten durch</h2>
-        <p>[Name der vertretungsberechtigten Person]</p>
+        <p>Jürgen Reuter</p>
         <h2 className="text-xl font-normal mt-6 mb-2">Kontakt</h2>
         <p>
-          Telefon: [eintragen]
+          Telefon: 0175 207 1953
           <br />
-          E-Mail: [eintragen]
+          E-Mail: juergenreuter@web.de
         </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Verantwortlich für den Inhalt</h2>
-        <p>[Name und Anschrift eintragen]</p>
+        <p>
+          Jürgen Reuter
+          <br />
+          Mörikeweg 24
+          <br />
+          59555 Lippstadt
+        </p>
         <h2 className="text-xl font-normal mt-6 mb-2">Erstellung der Website</h2>
         <p>
           Natürlich hat KI bei der Erstellung dieser Website geholfen. Im Wing Tschun nutzen wir, was funktioniert – beim Webdesign auch. Für die Inhalte stehen wir trotzdem ganz traditionell selbst ein.
