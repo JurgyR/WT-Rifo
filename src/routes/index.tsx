@@ -50,9 +50,15 @@ function HeroSlider() {
           key={idx}
           src={s.src}
           alt={s.alt}
+          width={960}
+          height={420}
+          loading={idx === 0 ? "eager" : "lazy"}
+          decoding={idx === 0 ? "sync" : "async"}
+          fetchPriority={idx === 0 ? "high" : "low"}
           className={`absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
+
       <div className="absolute right-3 top-3 flex gap-2 z-10">
         {slides.map((_, idx) => (
           <button
