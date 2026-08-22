@@ -1,4 +1,5 @@
-import { seoMeta } from "@/lib/seo";
+import { seoMeta, breadcrumbList } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
@@ -33,6 +34,14 @@ function WingTschun() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Wing Tschun" }]}
       banner={{ src: bannerMeister, label: "Wing Tschun" }}
     >
+      <JsonLd
+        data={() => [
+          breadcrumbList([
+            { name: "Startseite", path: "/" },
+            { name: "Wing Tschun", path: "/wing-tschun" },
+          ]),
+        ]}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-4 leading-tight">Wing Tschun Rifo</h1>
@@ -40,6 +49,13 @@ function WingTschun() {
             Wing Tschun ist eine chinesisch geprägte Kampfkunst. Im Mittelpunkt stehen nicht
             möglichst viele Einzeltechniken, sondern verständliche Prinzipien für
             Körperstruktur, Distanz, Timing und Reaktion.
+          </p>
+
+          <SectionTitle>Wing Tschun, Wing Chun oder Wing Tsun?</SectionTitle>
+          <p>
+            Für die Kampfkunst sind unterschiedliche Schreibweisen wie Wing Chun, Wing Tsun,
+            Ving Tsun oder Wing Tschun gebräuchlich. Auf dieser Website verwenden wir die
+            Schreibweise Wing Tschun für das von WT Rifo gelehrte System.
           </p>
 
           <SectionTitle>Wenige Grundregeln statt starrer Antworten</SectionTitle>

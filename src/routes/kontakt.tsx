@@ -1,4 +1,5 @@
-import { seoMeta } from "@/lib/seo";
+import { seoMeta, breadcrumbList } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Note, Button } from "@/components/SiteLayout";
 import { LinkList } from "@/components/Sidebar";
@@ -22,6 +23,14 @@ function Kontakt() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Kontakt" }]}
       banner={{ src: sifuBanner.url, label: "Kontakt" }}
     >
+      <JsonLd
+        data={() => [
+          breadcrumbList([
+            { name: "Startseite", path: "/" },
+            { name: "Kontakt", path: "/kontakt" },
+          ]),
+        ]}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-3">Probetraining und Kontakt</h1>
@@ -60,7 +69,7 @@ function Kontakt() {
                   0170 2088 949
                 </a>
               </p>
-              <Button to="/erwitte">Zur Schule</Button>
+              <Button to="/erwitte">Wing Tschun in Erwitte</Button>
             </article>
             <article className="border border-brand-gray-line bg-[#f0f0f0] p-4">
               <h2 className="text-lg font-normal mb-2">Hamm</h2>
@@ -84,7 +93,7 @@ function Kontakt() {
                   0176 6418 1156
                 </a>
               </p>
-              <Button to="/hamm">Zur Schule</Button>
+              <Button to="/hamm">Wing Tschun in Hamm</Button>
             </article>
             <article className="border border-brand-gray-line bg-[#f0f0f0] p-4">
               <h2 className="text-lg font-normal mb-2">Warstein</h2>
@@ -108,7 +117,7 @@ function Kontakt() {
                   0175 207 1953
                 </a>
               </p>
-              <Button to="/warstein">Zur Schule</Button>
+              <Button to="/warstein">Wing Tschun in Warstein</Button>
             </article>
           </div>
 
@@ -121,9 +130,11 @@ function Kontakt() {
 
           <h2 className="text-xl font-normal mt-6 mb-2">Kontakt nur bei Fragen</h2>
           <p>
-            Eine Nachricht ist nur sinnvoll, wenn du beispielsweise gesundheitliche
-            Einschränkungen, die Mitnahme einer größeren Gruppe oder eine organisatorische
-            Besonderheit vorab klären möchtest. Für den normalen ersten Besuch genügt es,
+            Eine Nachricht ist nur sinnvoll, wenn du beispielsweise die Mitnahme einer
+            größeren Gruppe oder eine organisatorische Besonderheit vorab klären möchtest.
+            Bei gesundheitlichen Einschränkungen kläre bitte telefonisch nur die für das
+            Training notwendigen organisatorischen Fragen. Sende keine Diagnosen oder
+            medizinischen Unterlagen per E-Mail. Für einen normalen ersten Besuch genügt es,
             rechtzeitig zur regulären Trainingszeit zu erscheinen.
           </p>
         </article>

@@ -1,4 +1,5 @@
-import { seoMeta } from "@/lib/seo";
+import { seoMeta, originUrl, breadcrumbList } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, Button, Note } from "@/components/SiteLayout";
 import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
@@ -41,6 +42,25 @@ function Schulen() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Schulen" }]}
       banner={{ src: sifuBanner.url, label: "Schulen" }}
     >
+      <JsonLd
+        data={() => [
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Wing Tschun Rifo Schulen",
+            itemListElement: schools.map((s, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: `Wing Tschun ${s.name}`,
+              url: originUrl(s.to),
+            })),
+          },
+          breadcrumbList([
+            { name: "Startseite", path: "/" },
+            { name: "Schulen", path: "/schulen" },
+          ]),
+        ]}
+      />
       <h1 className="text-2xl sm:text-3xl font-normal mb-3">Schulen und Trainer</h1>
       <p className="mb-6">
         Die Wing Tschun Rifo Organisation ist aktuell an drei Standorten vertreten.
