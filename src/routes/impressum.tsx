@@ -29,7 +29,7 @@ function Impressum() {
         <p>
           Jürgen Reuter
           <br />
-          Wing Tschun Rifo
+          Wing Tschun Rifo Warstein
           <br />
           Mörikeweg 24
           <br />
