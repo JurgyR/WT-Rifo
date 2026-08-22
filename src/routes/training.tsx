@@ -1,4 +1,5 @@
-import { seoMeta } from "@/lib/seo";
+import { seoMeta, breadcrumbList } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
@@ -52,6 +53,7 @@ function Training() {
       breadcrumbs={[{ to: "/", label: "Startseite" }, { label: "Training" }]}
       banner={{ src: sifuBanner.url, label: "Training" }}
     >
+      <JsonLd data={() => [breadcrumbList([{ name: "Startseite", path: "/" }, { name: "Training", path: "/training" }])]} />
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-8">
         <article>
           <h1 className="text-2xl sm:text-3xl font-normal mb-4">So läuft das Training ab</h1>
