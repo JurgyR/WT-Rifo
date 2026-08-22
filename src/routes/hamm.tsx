@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
@@ -7,13 +8,11 @@ import juergenPotthoff from "@/assets/wt-rifo/juergen-potthoff.jpg.asset.json";
 
 export const Route = createFileRoute("/hamm")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Hamm | Jürgen Potthoff" },
-      {
-        name: "description",
-        content: "Wing Tschun Rifo in Hamm unter der Leitung von Jürgen Potthoff.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Hamm – Probetraining | WT Rifo",
+      description:
+        "Wing Tschun in Hamm mit Jürgen Potthoff: Training montags und donnerstags, kostenloses Probetraining ohne Anmeldung.",
+    }),
   }),
   component: Hamm,
 });

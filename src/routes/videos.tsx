@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { LinkList } from "@/components/Sidebar";
@@ -7,14 +8,11 @@ import videoMitte from "@/assets/wt-rifo/video-die-mitte-der-welt.jpg";
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
-    meta: [
-      { title: "Videos | Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Ausgewählte Videos der Wing Tschun Rifo Organisation mit Einblicken in Training und Lehrgänge.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Rifo Videos: Training & Lehrgänge",
+      description:
+        "Ausgewählte Videos von Wing Tschun Rifo mit Einblicken in Training, Lehrgänge und die Arbeit von Sifu Jimmy Jemirifo.",
+    }),
   }),
   component: Videos,
 });

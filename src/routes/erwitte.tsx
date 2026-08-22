@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
@@ -7,13 +8,11 @@ import erwitteTraining from "@/assets/wt-rifo/erwitte-training.jpg.asset.json";
 
 export const Route = createFileRoute("/erwitte")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Erwitte | Erhard Jochem" },
-      {
-        name: "description",
-        content: "Wing Tschun Rifo in Erwitte unter der Leitung von Erhard Jochem.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Erwitte – Probetraining | WT Rifo",
+      description:
+        "Wing Tschun in Erwitte mit Erhard Jochem: Training montags und mittwochs, kostenloses Probetraining ohne Anmeldung am Hellweg 2.",
+    }),
   }),
   component: Erwitte,
 });

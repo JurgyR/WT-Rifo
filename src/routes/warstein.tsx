@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { SiteLayout, Button, Note, SectionTitle } from "@/components/SiteLayout";
@@ -7,14 +8,11 @@ import warsteinTraining from "@/assets/wt-rifo/warstein-training.jpg.asset.json"
 
 export const Route = createFileRoute("/warstein")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Warstein | Jürgen Reuter" },
-      {
-        name: "description",
-        content:
-          "Wing Tschun Rifo in Warstein mit Jürgen Reuter. Kostenloses Probetraining ohne Anmeldung, mittwochs und freitags 19:00–20:30 Uhr.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Warstein – Probetraining | WT Rifo",
+      description:
+        "Wing Tschun in Warstein mit Jürgen Reuter: mittwochs und freitags 19:00–20:30 Uhr, kostenloses Probetraining ohne Anmeldung.",
+    }),
   }),
   component: Warstein,
 });

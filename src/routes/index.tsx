@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
@@ -15,14 +16,11 @@ import videoSifu from "@/assets/wt-rifo/video-sifu-jimmy-jemirifo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Rifo | Kampfkunst in Erwitte, Hamm & Warstein",
+      description:
+        "Wing Tschun Rifo in Erwitte, Hamm und Warstein: Selbstverteidigung, Körpergefühl und kostenloses Probetraining ohne Anmeldung.",
+    }),
   }),
   component: Index,
 });

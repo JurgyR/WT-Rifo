@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Note, Button } from "@/components/SiteLayout";
 import { LinkList } from "@/components/Sidebar";
@@ -6,14 +7,11 @@ import probetraining from "@/assets/wt-rifo/probetraining.jpg";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
-    meta: [
-      { title: "Probetraining und Kontakt | Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Probetraining ohne Anmeldung und Kontakt zu den Wing Tschun Rifo Schulen in Erwitte, Hamm und Warstein.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Kostenloses Probetraining | Wing Tschun Rifo",
+      description:
+        "Kostenloses Wing-Tschun-Probetraining in Erwitte, Hamm oder Warstein – unverbindlich, ohne Vorkenntnisse und ohne Anmeldung.",
+    }),
   }),
   component: Kontakt,
 });

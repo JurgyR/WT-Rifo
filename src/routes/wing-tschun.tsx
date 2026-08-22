@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
@@ -5,14 +6,11 @@ import bannerMeister from "@/assets/wt-rifo/banner-meister.jpg";
 
 export const Route = createFileRoute("/wing-tschun")({
   head: () => ({
-    meta: [
-      { title: "Wing Tschun Rifo | Kampfkunst und Prinzipien" },
-      {
-        name: "description",
-        content:
-          "Was Wing Tschun auszeichnet: Prinzipien, Formen, Chi Sao, Partnertraining und verantwortungsvolle Selbstverteidigung.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Rifo: Kampfkunst & Prinzipien",
+      description:
+        "Was Wing Tschun Rifo auszeichnet: Prinzipien, Formen, Chi Sao, Partnertraining und verantwortungsvolle Selbstverteidigung für Einsteiger.",
+    }),
   }),
   component: WingTschun,
 });

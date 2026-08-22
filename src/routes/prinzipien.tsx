@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note, Button } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
@@ -5,23 +6,11 @@ import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.js
 
 export const Route = createFileRoute("/prinzipien")({
   head: () => ({
-    meta: [
-      { title: "Prinzipien im Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: direkt handeln, Kontakt nutzen, nachgeben und im richtigen Moment reagieren.",
-      },
-      {
-        property: "og:title",
-        content: "Prinzipien im Wing Tschun Rifo",
-      },
-      {
-        property: "og:description",
-        content:
-          "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: direkt handeln, Kontakt nutzen, nachgeben und im richtigen Moment reagieren.",
-      },
-    ],
+    meta: seoMeta({
+      title: "8 Prinzipien im Wing Tschun Rifo",
+      description:
+        "Die acht WT-Rifo-Kampfprinzipien von Sifu Jimmy Jemirifo verständlich erklärt: Kontakt, Nachgeben, Timing und kontrolliertes Handeln.",
+    }),
   }),
   component: Prinzipien,
 });

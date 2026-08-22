@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, SectionTitle, Note } from "@/components/SiteLayout";
 import { DefaultAside } from "@/components/Sidebar";
@@ -5,14 +6,11 @@ import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.js
 
 export const Route = createFileRoute("/trainingsinhalte")({
   head: () => ({
-    meta: [
-      { title: "Trainingsinhalte | Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Formen, Siu Nim Tao, Chum Kiu, Chi Sao und Partnerübungen im Wing Tschun verständlich für Einsteiger erklärt.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun: Formen, Chi Sao & Partnerübungen",
+      description:
+        "Formen, Siu Nim Tao, Chum Kiu, Chi Sao und Partnerübungen im Wing Tschun verständlich für Einsteiger erklärt.",
+    }),
   }),
   component: Inhalte,
 });

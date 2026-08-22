@@ -1,17 +1,15 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, Button, Note } from "@/components/SiteLayout";
 import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 
 export const Route = createFileRoute("/schulen")({
   head: () => ({
-    meta: [
-      { title: "Schulen | Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Wing Tschun Rifo Schulen in Erwitte, Hamm und Warstein mit den jeweiligen Trainern.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun Schulen: Erwitte, Hamm & Warstein",
+      description:
+        "Wing Tschun Rifo Schulen in Erwitte, Hamm und Warstein: Trainer, Trainingszeiten, Adressen und Probetraining ohne Anmeldung.",
+    }),
   }),
   component: Schulen,
 });

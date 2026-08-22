@@ -1,3 +1,4 @@
+import { seoMeta } from "@/lib/seo";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
 import { LinkList, ProbetrainingBox } from "@/components/Sidebar";
@@ -5,14 +6,11 @@ import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.js
 
 export const Route = createFileRoute("/einsteiger")({
   head: () => ({
-    meta: [
-      { title: "Für Einsteiger | Wing Tschun Rifo" },
-      {
-        name: "description",
-        content:
-          "Antworten für Wing-Tschun-Einsteiger: Vorerfahrung, Fitness, Alter, Probetraining, Kleidung, Sicherheit und Trainingsfortschritt.",
-      },
-    ],
+    meta: seoMeta({
+      title: "Wing Tschun für Anfänger: erster Besuch | WT Rifo",
+      description:
+        "Wing Tschun für Einsteiger: Antworten zu Vorerfahrung, Fitness, Kleidung, Sicherheit und dem ersten kostenlosen Probetraining.",
+    }),
   }),
   component: Einsteiger,
 });
