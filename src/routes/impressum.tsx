@@ -54,9 +54,9 @@ function Impressum() {
         <p>
           Natürlich hat KI bei der Erstellung dieser Website geholfen. Im Wing Tschun nutzen wir, was funktioniert – beim Webdesign auch. Für die Inhalte stehen wir trotzdem ganz traditionell selbst ein.
         </p>
-        <p className="text-sm text-brand-gray mt-6">
-          Diese Seite ist eine technische Vorlage und keine Rechtsberatung. Die Angaben müssen
-          vor Veröffentlichung geprüft werden.
+        <h2 className="text-xl font-normal mt-6 mb-2">Verbraucherstreitbeilegung</h2>
+        <p>
+          Der Betreiber ist weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
         </p>
       </article>
     </SiteLayout>
