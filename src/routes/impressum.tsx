@@ -32,8 +32,6 @@ function Impressum() {
           <br />
           Deutschland
         </p>
-        <h2 className="text-xl font-normal mt-6 mb-2">Vertreten durch</h2>
-        <p>Jürgen Reuter</p>
         <h2 className="text-xl font-normal mt-6 mb-2">Kontakt</h2>
         <p>
           Telefon: 0175 207 1953
