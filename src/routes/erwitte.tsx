@@ -87,7 +87,7 @@ function Erwitte() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Erwitte</h2>
-            <img src={erwitteTraining.url} alt="Wing-Tschun-Training in Erwitte" className="w-full mb-3" />
+            <img src={erwitteTraining.url} alt="Wing-Tschun-Training in Erwitte" width={260} height={195} loading="lazy" decoding="async" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />

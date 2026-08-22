@@ -86,7 +86,7 @@ function Hamm() {
         <aside>
           <section className="mb-6">
             <h2 className="text-lg font-normal mb-2">Hamm</h2>
-            <img src={juergenPotthoff.url} alt="Jürgen Potthoff, Schulleitung Hamm" className="w-full mb-3" />
+            <img src={juergenPotthoff.url} alt="Jürgen Potthoff, Schulleitung Hamm" width={260} height={195} loading="lazy" decoding="async" className="w-full mb-3" />
             <p className="text-sm mb-3">
               <strong>Schulleitung:</strong>
               <br />

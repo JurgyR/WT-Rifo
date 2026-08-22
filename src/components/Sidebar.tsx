@@ -52,6 +52,10 @@ export function ProbetrainingBox({ children }: { children?: ReactNode }) {
       <img
         src={probetraining}
         alt="Training der Wing Tschun Rifo Organisation"
+        width={260}
+        height={160}
+        loading="lazy"
+        decoding="async"
         className="w-full h-40 object-cover mb-3"
       />
       {children ?? (

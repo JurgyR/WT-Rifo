@@ -214,6 +214,10 @@ function Index() {
           <img
             src={selbstverteidigung}
             alt="Wing-Tschun-Selbstverteidigung"
+            width={260}
+            height={195}
+            loading="lazy"
+            decoding="async"
             className="w-full mb-3"
           />
           <p className="text-sm mb-4">
@@ -242,7 +246,7 @@ function Index() {
             className="relative block overflow-hidden mb-3"
             aria-label="Video WT-Rifo Sifu Jimmy Jemirifo auf YouTube öffnen"
           >
-            <img src={videoSifu} alt="Trainingsszene WT-Rifo Sifu Jimmy Jemirifo" className="w-full" />
+            <img src={videoSifu} alt="Trainingsszene WT-Rifo Sifu Jimmy Jemirifo" width={260} height={146} loading="lazy" decoding="async" className="w-full" />
             <span className="absolute left-2 bottom-2 bg-brand-gray/90 text-white text-xs font-bold px-2 py-1 border-l-4 border-brand-yellow">
               Video ansehen
             </span>
@@ -262,6 +266,10 @@ function Index() {
             <img
               src={probetraining}
               alt="Training der Wing Tschun Rifo Organisation"
+              width={260}
+              height={160}
+              loading="lazy"
+              decoding="async"
               className="w-full h-40 object-cover mb-3"
             />
             <p className="text-sm mb-3">

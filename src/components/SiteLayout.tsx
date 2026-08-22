@@ -35,7 +35,7 @@ export function SiteLayout({
       <header className="w-full border-b border-brand-gray-line bg-white">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-3 shrink-0" aria-label="WT-Rifo Startseite">
-            <img src={logo} alt="Wing Tschun Rifo Logo" className="h-14 w-auto md:h-16" />
+            <img src={logo} alt="Wing Tschun Rifo Logo" width={180} height={64} decoding="async" className="h-14 w-auto md:h-16" />
           </Link>
           <nav className="hidden md:flex items-center" aria-label="Hauptnavigation">
             <ul className="flex flex-wrap gap-1 text-sm font-semibold">
@@ -104,7 +104,7 @@ export function SiteLayout({
 
       {banner && (
         <div className="relative w-full overflow-hidden bg-brand-gray-light" style={{ aspectRatio: "960 / 304" }}>
-          <img src={banner.src} alt={banner.alt ?? ""} className="absolute inset-0 h-full w-full object-contain object-center" />
+          <img src={banner.src} alt={banner.alt ?? ""} width={960} height={304} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-contain object-center" />
           <span className="absolute left-4 bottom-4 sm:left-10 sm:bottom-6 bg-brand-gray/90 text-white px-3 py-2 sm:px-4 sm:py-2.5 border-l-4 sm:border-l-[7px] border-brand-yellow text-lg sm:text-2xl leading-tight max-w-[85%]">
             {banner.label}
           </span>
