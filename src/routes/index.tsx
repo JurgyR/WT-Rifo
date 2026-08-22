@@ -1,4 +1,5 @@
-import { seoMeta } from "@/lib/seo";
+import { seoMeta, originUrl } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SiteLayout, Button, SectionTitle } from "@/components/SiteLayout";
