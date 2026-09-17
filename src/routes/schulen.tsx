@@ -7,9 +7,9 @@ import sifuBanner from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.js
 export const Route = createFileRoute("/schulen")({
   head: () => ({
     meta: seoMeta({
-      title: "Wing Tschun Schulen: Erwitte, Hamm & Warstein",
+      title: "Wing Tschun Schulen: Erwitte & Warstein",
       description:
-        "Wing Tschun Rifo Schulen in Erwitte, Hamm und Warstein: Trainer, Trainingszeiten, Adressen und Probetraining ohne Anmeldung.",
+        "Wing Tschun Rifo Schulen in Erwitte und Warstein: Trainer, Trainingszeiten, Adressen und Probetraining ohne Anmeldung.",
     }),
   }),
   component: Schulen,
@@ -21,12 +21,6 @@ const schools = [
     trainer: "Erhard Jochem",
     body: "Training montags und mittwochs von 19:15 bis 20:45 Uhr in Erwitte. Schulleitung: Erhard Jochem.",
     to: "/erwitte",
-  },
-  {
-    name: "Hamm",
-    trainer: "Jürgen Potthoff",
-    body: "Training montags und donnerstags von 19:30 bis 21:00 Uhr in Hamm. Schulleitung: Jürgen Potthoff.",
-    to: "/hamm",
   },
   {
     name: "Warstein",
