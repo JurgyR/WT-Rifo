@@ -60,7 +60,7 @@ function Schulen() {
         Die Wing Tschun Rifo Organisation ist aktuell an drei Standorten vertreten.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         {schools.map((s) => (
           <article key={s.name} className="border border-brand-gray-line bg-[#f3f3f3] flex flex-col">
             <header className="bg-brand-gray text-white p-3 border-b-4 border-brand-yellow">

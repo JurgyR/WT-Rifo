@@ -8,7 +8,7 @@ import bannerHartWeich from "@/assets/wt-rifo/banner-hart-weich.jpg";
 import bannerMeister from "@/assets/wt-rifo/banner-meister.jpg";
 import bannerSifuJimmy from "@/assets/wt-rifo/sifu-jimmy-jemirifo-banner.jpg.asset.json";
 import taoTeKing from "@/assets/wt-rifo/tao-te-king.jpg";
-import hammTraining from "@/assets/wt-rifo/hamm-training.jpg.asset.json";
+
 import technik from "@/assets/wt-rifo/technik.webp";
 import warsteinHome from "@/assets/wt-rifo/warstein-home.jpg.asset.json";
 import selbstverteidigung from "@/assets/wt-rifo/selbstverteidigung.webp";
@@ -18,9 +18,9 @@ import videoSifu from "@/assets/wt-rifo/video-sifu-jimmy-jemirifo.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: seoMeta({
-      title: "Wing Tschun Rifo | Kampfkunst in Erwitte, Hamm & Warstein",
+      title: "Wing Tschun Rifo | Kampfkunst in Erwitte & Warstein",
       description:
-        "Wing Tschun Rifo in Erwitte, Hamm und Warstein: Selbstverteidigung, Körpergefühl und kostenloses Probetraining ohne Anmeldung.",
+        "Wing Tschun Rifo in Erwitte und Warstein: Selbstverteidigung, Körpergefühl und kostenloses Probetraining ohne Anmeldung.",
     }),
   }),
   component: Index,
@@ -138,7 +138,7 @@ function Index() {
         <div>
           <p className="text-lg font-bold m-0">Probetraining ohne Anmeldung</p>
           <p className="text-sm m-0 mt-1">
-            Wähle Erwitte, Hamm oder Warstein und lerne das Training unverbindlich kennen.
+            Wähle Erwitte oder Warstein und lerne das Training unverbindlich kennen.
           </p>
         </div>
         <Button to="/schulen">Standort auswählen</Button>
@@ -157,7 +157,7 @@ function Index() {
             className="w-full mb-4"
           />
           <h1 id="welcome-title" className="text-2xl sm:text-3xl font-normal mb-3 leading-tight">
-            Wing Tschun Rifo in Erwitte, Hamm und Warstein
+            Wing Tschun Rifo in Erwitte und Warstein
           </h1>
 
           <p className="text-base leading-relaxed mb-3">
@@ -165,9 +165,9 @@ function Index() {
             Aufmerksamkeit und persönlicher Entwicklung.
           </p>
           <p className="mb-4">
-            Heute wird an drei Standorten trainiert: <strong>Erwitte</strong>,{" "}
-            <strong>Hamm</strong> und <strong>Warstein</strong>. Die Schulen werden von
-            erfahrenen Trainern persönlich geleitet.
+            Heute wird an zwei Standorten trainiert: <strong>Erwitte</strong> und{" "}
+            <strong>Warstein</strong>. Die Schulen werden von erfahrenen Trainern
+            persönlich geleitet.
           </p>
 
           <SectionTitle>
@@ -184,15 +184,6 @@ function Index() {
           >
             Training mit <strong>Erhard Jochem</strong>, montags und mittwochs von
             19:15–20:45 Uhr.
-          </NewsItem>
-          <NewsItem
-            img={hammTraining.url}
-            alt="Wing-Tschun-Partnertraining in Hamm"
-            to="/hamm"
-            title="Hamm"
-          >
-            Training mit <strong>Jürgen Potthoff</strong>, montags und donnerstags von
-            19:30–21:00 Uhr.
           </NewsItem>
           <NewsItem
             img={warsteinHome.url}
