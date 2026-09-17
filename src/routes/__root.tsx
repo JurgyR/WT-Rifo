@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       ...seoMeta({
         title: "Wing Tschun Rifo",
         description:
-          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte, Hamm und Warstein.",
+          "Wing Tschun Rifo Kampfkunst an den Standorten Erwitte und Warstein.",
       }),
       { name: "theme-color", content: "#4d4e53" },
       { property: "og:type", content: "website" },
